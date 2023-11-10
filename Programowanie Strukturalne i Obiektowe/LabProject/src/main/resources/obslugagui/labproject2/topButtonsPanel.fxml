@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="obslugagui.labproject2.TopButtonsPanelController">
+   <children>
+      <ToggleButton fx:id="peopleList" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="81.0" prefWidth="183.0" text="Lista Osób">
+         <HBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </HBox.margin>
+         <toggleGroup>
+            <ToggleGroup fx:id="toggleGroup" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="studentsList" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="81.0" prefWidth="183.0" text="Lista Studentów" toggleGroup="$toggleGroup">
+         <HBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </HBox.margin>
+      </ToggleButton>
+      <ToggleButton fx:id="workersList" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="81.0" prefWidth="183.0" text="Lista Pracowników" toggleGroup="$toggleGroup">
+         <HBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </HBox.margin>
+      </ToggleButton>
+      <Button fx:id="studentsPanel" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="81.0" prefWidth="183.0" text="Zarzadzaj Studentami">
+         <HBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </HBox.margin>
+      </Button>
+      <Button fx:id="workersPanel" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="81.0" prefWidth="183.0" text="Zarzadzaj Pracownikami">
+         <HBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </HBox.margin>
+      </Button>
+   </children>
+</HBox>

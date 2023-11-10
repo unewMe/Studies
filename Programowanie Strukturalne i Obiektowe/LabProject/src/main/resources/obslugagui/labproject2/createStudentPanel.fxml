@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="60.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="obslugagui.labproject2.Student.CreateStudentPanelController">
+   <children>
+      <Label text="Tworzenie Studenta">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER">
+         <children>
+            <ScrollPane prefHeight="324.0" prefWidth="202.0">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="400.0" prefWidth="182.0" spacing="5.0">
+                     <children>
+                        <Label text="Podaj imie:" />
+                        <TextField fx:id="nameField" />
+                        <Label text="Podaj nazwisko:" />
+                        <TextField fx:id="surnameField" />
+                        <Label layoutX="10.0" layoutY="309.0" text="Podaj pesel:" />
+                        <TextField fx:id="idField" />
+                        <Label layoutX="10.0" layoutY="327.0" text="Podaj miejsce zamieszkania:" />
+                        <TextField fx:id="placeOfResidenceField" layoutX="10.0" layoutY="79.0" />
+                        <Label layoutX="10.0" layoutY="344.0" text="Podaj wiek:" />
+                        <TextField fx:id="ageField" layoutX="10.0" layoutY="104.0" />
+                        <Label layoutX="10.0" layoutY="344.0" text="Podaj indeks:" />
+                        <TextField fx:id="indexField" layoutX="10.0" layoutY="130.0" prefHeight="26.0" prefWidth="182.0" />
+                        <Label text="Podaj rok studiow:" />
+                        <TextField fx:id="studyYearField" />
+                        <Label text="Wybierz typ studiow:" />
+                        <RadioButton fx:id="fullTimeRadioButton" mnemonicParsing="false" onAction="#radioButtonAction" selected="true" text="Dzienne">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="studentSelection" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="extramuralRadioButton" mnemonicParsing="false" onAction="#radioButtonAction" text="Zaoczne" toggleGroup="$studentSelection" />
+                        <Label text="Podaj odlegosc od domu:" />
+                        <TextField fx:id="distanceFromHomeField" />
+                        <Label fx:id="questionLabel" text="Czy udziela sie w samorzadzie?" />
+                        <RadioButton fx:id="yesRadioButton" mnemonicParsing="false" prefHeight="17.0" prefWidth="40.0" selected="true" text="Tak">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="yesOrNoSelection" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="noRadioButton" mnemonicParsing="false" prefHeight="17.0" prefWidth="40.0" text="Nie" toggleGroup="$yesOrNoSelection" />
+                        <Button fx:id="submitButton" mnemonicParsing="false" onAction="#submitButtonPressed" text="Potwierdz" />
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+   </children>
+</VBox>

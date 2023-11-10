@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="498.0" prefWidth="434.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="obslugagui.labproject2.Student.AddCoursePanelController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="434.0">
+         <children>
+            <Label text="Tworzenie Kursu">
+               <font>
+                  <Font size="29.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="70.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="268.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="19.0" prefWidth="600.0">
+               <children>
+                  <Label text="Podaj nazwe kursu:">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="courseField" prefHeight="25.0" prefWidth="212.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="17.0" prefWidth="600.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="94.0" text="Wybierz Studenta" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="222.0">
+               <children>
+                  <ComboBox fx:id="comboBox" prefHeight="35.0" prefWidth="210.0" promptText="Nazwisko Imie Indeks">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <Button fx:id="submitButton" minWidth="60.0" mnemonicParsing="false" onAction="#submitButtonPressed" prefHeight="26.0" prefWidth="0.0" text="Submit" />
+         </children>
+      </VBox>
+   </children>
+</VBox>
