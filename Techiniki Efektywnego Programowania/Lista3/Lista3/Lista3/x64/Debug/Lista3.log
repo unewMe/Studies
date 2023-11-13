@@ -1,0 +1,4 @@
+﻿  CTree.cpp
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\Lista3\CTree.cpp(9,18): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\Lista3\CTree.cpp(78): warning C4715: "CTree::enter”: niewszystkie ścieżki kodu zwracają wartość
+  Lista3.vcxproj -> C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\x64\Debug\Lista3.exe
