@@ -35,3 +35,13 @@ std::string CNode::getValue()
 {
 	return value;
 }
+
+void CNode::setValuePointer(std::string* valuePointer)
+{
+	this->valuePointer = valuePointer;
+}
+
+std::string CNode::getValuePointer()
+{
+	return *valuePointer;
+}
