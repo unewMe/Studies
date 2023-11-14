@@ -1,2 +1,8 @@
-﻿  main.cpp
+﻿  CTree.cpp
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\Lista3\CTree.cpp(9,18): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\Lista3\CTree.cpp(29,18): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\Lista3\CTree.cpp(44,18): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\Lista3\CTree.cpp(80,6): warning C4101: "temp": lokalna zmienna, do której nie istnieje odwołanie
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\Lista3\CTree.cpp(224,36): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\Lista3\CTree.cpp(140): warning C4715: "CTree::enter”: niewszystkie ścieżki kodu zwracają wartość
   Lista3.vcxproj -> C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\x64\Debug\Lista3.exe

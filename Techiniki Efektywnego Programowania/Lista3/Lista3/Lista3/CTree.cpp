@@ -126,8 +126,9 @@ bool CTree::enter(std::string expression)
 		}
 		else if ((*root).getWhatAmI() == 0)
 		{
-			args.push_back(new std::string(next));
-			(*root).setValuePointer(args[args.size() - 1]);
+			args.push_back(next);
+			argsValueMap[next] = -1;
+			argsCountMap[next]++;
 			return true;
 		}
 		else
@@ -147,16 +148,12 @@ void CTree::addNextNode(CNode* current, std::string& expression)
 	}
 	else if (current->getWhatAmI() == 0)
 	{
-		int ifIndexOf = indexOf(current->getValue());
-		if (ifIndexOf == -1)
+		if (argsValueMap[current->getValue()] == 0)
 		{
-			args.push_back(new std::string(current->getValue()));
-			current->setValuePointer(args[args.size() - 1]);
+			args.push_back(current->getValue());
+			argsValueMap[current->getValue()] = -1;	
 		}
-		else
-		{
-			current->setValuePointer(args[ifIndexOf]);
-		}
+		argsCountMap[current->getValue()]++;
 	}
 	while (argsCount > 0)
 	{
@@ -196,7 +193,7 @@ void CTree::printChild(CNode* current)
 	}
 }
 
-std::vector<std::string*> CTree::getArgs()
+std::vector<std::string> CTree::getArgs()
 {
 	return args;
 }
@@ -224,12 +221,76 @@ double CTree::comp(std::string expression)
 
 	for (int i = 0; i < args.size(); i++)
 	{
-		std::string temp = *args[i];
-		*args[i] = argsValues[i];
-		argsValues[i] = temp;
+		argsValueMap[args[i]] = std::stod(argsValues[i]);
 	}
 
 	return comp(root);
+}
+
+CTree& CTree::operator=(const CTree& tree)
+{
+	if (this == &tree)
+	{
+		return *this;
+	}
+	else
+	{
+		root = new CNode(*(tree.root));
+		args = tree.args;
+		argsValueMap = tree.argsValueMap;
+		argsCountMap = tree.argsCountMap;
+		return *this;
+	}
+}
+
+CTree CTree::join(std::string expression)
+{
+	CTree tree;
+
+	tree.enter(expression);
+	if (root->getWhatAmI() != 1)
+	{
+		return tree;
+	}
+
+	CTree res;
+	res = *this;
+
+	CNode* nodeBefore = getNodeBefore(res.root);
+	if (nodeBefore->getWhatAmI() == 0)
+	{
+		if (res.argsCountMap[nodeBefore->getValue()] == 1)
+		{
+			res.argsCountMap.erase(nodeBefore->getValue());
+			res.argsValueMap.erase(nodeBefore->getValue());
+		}
+		else
+		{
+			res.argsCountMap[nodeBefore->getValue()]--;
+		}
+	}
+	delete nodeBefore->getChild(0);
+	nodeBefore->setChild(0,tree.root);
+
+	for (int i = 0; i < tree.args.size(); i++)
+	{
+		res.argsCountMap[tree.args[i]]++;
+		res.argsValueMap[tree.args[i]] = -1;
+	}
+
+	return res;
+}
+
+CNode* CTree::getNodeBefore(CNode* current)
+{
+	if (current->getChild(0)->getChildrenCount() <=0 )
+	{
+		return current;
+	}
+	else
+	{
+		return getNodeBefore(current->getChild(0));
+	}
 }
 
 double CTree::comp(CNode* current)
@@ -268,7 +329,7 @@ double CTree::comp(CNode* current)
 	}
 	else if (current->getWhatAmI() == 0)
 	{
-		return std::stod(current->getValuePointer());
+		return argsValueMap[current->getValue()];
 	}
 	else
 	{
@@ -280,7 +341,7 @@ bool CTree::contains(std::string arg)
 {
 	for (int i = 0; i < args.size(); i++)
 	{
-		if (*args[i] == arg)
+		if (args[i] == arg)
 		{
 			return true;
 		}
@@ -291,7 +352,7 @@ int CTree::indexOf(std::string arg)
 {
 	for (int i = 0; i < args.size(); i++)
 	{
-		if (*args[i] == arg)
+		if (args[i] == arg)
 		{
 			return i;
 		}

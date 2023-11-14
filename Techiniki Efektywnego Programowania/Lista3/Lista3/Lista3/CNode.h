@@ -16,11 +16,11 @@ public:
 	CNode(std::string value);
 	CNode(std::string value,int whatAmI);
 	CNode(const CNode& node);
-	~CNode();
 	CNode* getChild(int index);
 	std::string getValue();
 	int getWhatAmI();
 	void pushChld(CNode* child);
+	void setChild(int index, CNode* child);
 	void setValue(std::string value);
 	void setValuePointer(std::string* valuePointer);
 	std::string getValuePointer();
@@ -28,6 +28,8 @@ public:
 	void incrementChildrenCount();
 	int getChildrenCount();
 	std::string toString();
+
+	CNode& operator=(const CNode& node);
 	
 
 };

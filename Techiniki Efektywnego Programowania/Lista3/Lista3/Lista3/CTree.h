@@ -10,12 +10,16 @@ class CTree
 {
 private:
 	CNode* root;
-	std::vector<std::string*> args;
+	std::vector<std::string> args;
+	std::unordered_map<std::string, int> argsValueMap;
+	std::unordered_map<std::string, int> argsCountMap;
 	static std::unordered_map<std::string, int> funMap;
 public:
-	std::vector<std::string*> getArgs();
+	std::vector<std::string> getArgs();
 	bool enter(std::string expression);
 	void print();
+	CTree join(std::string expression);
+	CNode* getNodeBefore(CNode* current);
 	void addNextNode(CNode* current,std::string& expression);
 	double comp(std::string expression);
 	double comp(CNode* current);
@@ -23,4 +27,6 @@ public:
 	void printChild(CNode* current);
 	bool contains(std::string expression);
 	int indexOf(std::string expression);
+
+	CTree& operator=(const CTree& tree);
 };
