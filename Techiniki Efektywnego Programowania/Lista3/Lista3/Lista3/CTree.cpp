@@ -42,7 +42,7 @@ void notRemove (std::string& expression,std::regex& pattern)
 void removeUnnesesary(std::string& expression)
 {
 	int currentSize = expression.size();
-	std::regex patternLetter("[a-zA-Z]+");
+	std::regex patternLetter("[a-zA-Z0-9]+");
 	std::regex patternNumber("[0-9]+");
 	std::regex patternOperator("[+-/*]");
 	while (expression != "")
@@ -53,11 +53,11 @@ void removeUnnesesary(std::string& expression)
 			notRemove(expression, patternLetter);
 			return;
 		}
-		else if (std::regex_match(toMatch, patternNumber))
-		{
-			notRemove(expression, patternNumber);
-			return;
-		}
+		//else if (std::regex_match(toMatch, patternNumber))
+		//{
+		//	notRemove(expression, patternNumber);
+		//	return;
+		//}
 		else if (std :: regex_match(toMatch,patternOperator))
 		{
 			expression = toMatch;
@@ -73,9 +73,29 @@ void removeUnnesesary(std::string& expression)
 
 }
 
+CTree::~CTree()
+{
+	if(root != nullptr)
+		delete root;
+}
+
+bool ifLetter(std::string next)
+{
+
+	std::regex patternLetter("[a-zA-Z]");
+	for (int i = 0; i < next.size(); i++)
+	{
+		if (std::regex_match(std::string(1, next[i]), patternLetter))
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
 int CTree:: whatAmI(std::string next)
 {
-	std::regex patternLetter("[a-zA-Z]+");
+	std::regex patternLetter("[a-zA-Z]");//("[a - zA - Z].*[a - zA - Z0 - 9] * ");//("[a - zA - Z] + [a - zA - Z0 - 9] * ");
 	std::regex patternNumber("[0-9]+");
 	int temp;
 	try
@@ -95,7 +115,7 @@ int CTree:: whatAmI(std::string next)
 	catch (const std::exception&)
 	{
 
-		if (std::regex_match(next, patternLetter))
+		if (ifLetter(next))
 		{
 			return 0;
 		}
@@ -110,7 +130,34 @@ int CTree:: whatAmI(std::string next)
 
 bool CTree::enter(std::string expression)
 {
-	std::string next = takeNext(expression);
+	std::string next = "";
+	while ((next = takeNext(expression)) != "")
+	{
+		removeUnnesesary(next);
+		if (next == "")
+		{
+			
+		}
+		else
+		{
+			root = new CNode(next, whatAmI(next));
+			if ((*root).getWhatAmI() == 0)
+			{
+				args.push_back(next);
+				argsValueMap[next] = -1;
+				argsCountMap[next]++;
+			}
+			else if ((*root).getWhatAmI() == 1)
+			{
+				addNextNode(root, expression);
+			}
+			//root = new CNode(next, whatAmI(next));
+			//addNextNode(root, expression);
+			return true;
+		}
+	}
+	return false;
+//	std::string next = takeNext(expression);
 	removeUnnesesary(next);
 	int argsCount = 0;
 	if (next == "")
@@ -235,12 +282,26 @@ CTree& CTree::operator=(const CTree& tree)
 	}
 	else
 	{
+		delete root;
 		root = new CNode(*(tree.root));
 		args = tree.args;
 		argsValueMap = tree.argsValueMap;
 		argsCountMap = tree.argsCountMap;
 		return *this;
 	}
+}
+
+CTree::CTree(const CTree& tree)
+{
+	root = new CNode(*(tree.root));
+	args = tree.args;
+	argsValueMap = tree.argsValueMap;
+	argsCountMap = tree.argsCountMap;
+}
+
+CTree::CTree()
+{
+	root = nullptr;
 }
 
 CTree CTree::join(std::string expression)
@@ -257,25 +318,27 @@ CTree CTree::join(std::string expression)
 	res = *this;
 
 	CNode* nodeBefore = getNodeBefore(res.root);
-	if (nodeBefore->getWhatAmI() == 0)
+	if (nodeBefore->getChild(0)->getWhatAmI() == 0)
 	{
-		if (res.argsCountMap[nodeBefore->getValue()] == 1)
+		if (res.argsCountMap[nodeBefore->getChild(0)->getValue()] == 1)
 		{
-			res.argsCountMap.erase(nodeBefore->getValue());
-			res.argsValueMap.erase(nodeBefore->getValue());
+			res.argsCountMap.erase(nodeBefore->getChild(0)->getValue());
+			res.argsValueMap.erase(nodeBefore->getChild(0)->getValue());
+			res.args.erase(res.args.begin() + res.indexOf(nodeBefore->getChild(0)->getValue()));
 		}
 		else
 		{
-			res.argsCountMap[nodeBefore->getValue()]--;
+			res.argsCountMap[nodeBefore->getChild(0)->getValue()]--;
 		}
 	}
-	delete nodeBefore->getChild(0);
-	nodeBefore->setChild(0,tree.root);
+	delete (nodeBefore->getChild(0));
+	nodeBefore->setChild(0,*(tree.root));
 
 	for (int i = 0; i < tree.args.size(); i++)
 	{
 		res.argsCountMap[tree.args[i]]++;
 		res.argsValueMap[tree.args[i]] = -1;
+		res.args.push_back(tree.args[i]);
 	}
 
 	return res;

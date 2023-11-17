@@ -15,6 +15,9 @@ private:
 	std::unordered_map<std::string, int> argsCountMap;
 	static std::unordered_map<std::string, int> funMap;
 public:
+	CTree();
+	~CTree();
+	CTree(const CTree &tree);
 	std::vector<std::string> getArgs();
 	bool enter(std::string expression);
 	void print();

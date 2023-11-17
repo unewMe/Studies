@@ -27,9 +27,17 @@ int CNode::getChildrenCount()
 	return childrenCount;
 }
 
-void CNode::setChild(int index, CNode* child)
+void CNode::setChild(int index, CNode child)
 {
-	children[index] = child;
+	children[index] = new CNode(child);
+}
+
+CNode::~CNode()
+{
+	for (int i = 0; i < children.size(); i++)
+	{
+		delete children[i];
+	}
 }
 
 CNode::CNode(const CNode& node)
