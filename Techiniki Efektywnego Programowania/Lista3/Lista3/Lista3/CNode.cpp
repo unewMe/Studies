@@ -17,12 +17,12 @@ void CNode::pushChld(CNode* child)
 {
 	children.push_back(child);
 }
-
-CNode* CNode::getChild(int index)
+ 
+CNode* CNode::getChild(int index) const	
 {
 	return children[index];
 }
-int CNode::getChildrenCount()
+int CNode::getChildrenCount() const
 {
 	return childrenCount;
 }
@@ -69,21 +69,11 @@ CNode& CNode::operator=(const CNode& node)
 
 }
 
-int CNode::getWhatAmI()
+int CNode::getWhatAmI() const
 {
 	return whatAmI;
 }
-std::string CNode::getValue()
+std::string CNode::getValue() const
 {
 	return value;
-}
-
-void CNode::setValuePointer(std::string* valuePointer)
-{
-	this->valuePointer = valuePointer;
-}
-
-std::string CNode::getValuePointer()
-{
-	return *valuePointer;
 }
