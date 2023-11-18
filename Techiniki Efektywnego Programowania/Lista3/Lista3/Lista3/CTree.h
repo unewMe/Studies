@@ -25,7 +25,7 @@ private:
 	void notRemove(std::string& expression,const std::regex& pattern, bool ifAdd);
 	void printChild(const CNode* current, std::stringstream& stringBuffer) const;
 
-	int whatAmI(const std::string& next) const;
+	int whatAmI(const std::string& value) const;
 	int indexOf(const std::string& expression) const;
 	
 	double comp(const CNode* current);

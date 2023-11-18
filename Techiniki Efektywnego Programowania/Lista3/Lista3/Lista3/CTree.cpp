@@ -122,20 +122,19 @@ bool CTree::checkRestOfExpresion(std::string& expression)
 double CTree::comp(std::string expression)
 {
 
-
 	if (root == nullptr)
 	{
-		throw std::exception();
+		throw std::invalid_argument("Tree do not exsist");
 	}
 
 
 	std::vector<std::string> argsValues;
 	std::string next = "";
+	std::regex patternNumber("[0-9]+");
+
 	while ((next = takeNext(expression)) != "")
 	{
-		std::regex patternNumber("[0-9]+");
 		notRemove(next, patternNumber, false);
-
 		if (next != "")
 		{
 			argsValues.push_back(next);
@@ -145,7 +144,7 @@ double CTree::comp(std::string expression)
 
 	if (argsValues.size() != args.size())
 	{
-		throw std::exception();
+		throw std::length_error("Bad number of vars");
 	}
 
 	for (int i = 0; i < args.size(); i++)
@@ -186,7 +185,7 @@ double CTree::comp(const CNode* current)
 		}
 		else
 		{
-			throw std::exception();
+			throw std::invalid_argument("Operation do not exsist");
 		}
 
 	}
@@ -208,7 +207,7 @@ CTree CTree::join(const CTree& tree) const
 	}
 	else
 	{
-		throw std::exception();
+		throw std::invalid_argument("Tree do not exsist");
 	}
 
 }
@@ -224,7 +223,7 @@ CTree CTree::join(std::string expression) const
 	}
 	else
 	{
-		throw std::exception();
+		throw std::invalid_argument("Tree do not exsist");
 	}
 }
 
@@ -290,7 +289,7 @@ std::string CTree::print() const
 {
 	if (root == nullptr)
 	{
-		throw std::exception();
+		throw std::invalid_argument("Tree do not exsist");
 	}
 	std::stringstream stringBuffer;
 	printChild(root, stringBuffer);
@@ -299,7 +298,6 @@ std::string CTree::print() const
 
 void CTree::printChild(const CNode* current, std::stringstream& stringBuffer) const
 {
-	//std::cout << (*current).getValue();
 	stringBuffer << (*current).getValue() << " ";
 	int counter = 0;
 	while (counter < (*current).getChildrenCount())
@@ -309,29 +307,24 @@ void CTree::printChild(const CNode* current, std::stringstream& stringBuffer) co
 	}
 }
 
-int CTree:: whatAmI(const std::string& next) const
+int CTree:: whatAmI(const std::string& value) const
 {
-	std::regex patternLetter("[a-zA-Z]");//("[a - zA - Z].*[a - zA - Z0 - 9] * ");//("[a - zA - Z] + [a - zA - Z0 - 9] * ");
-	std::regex patternNumber("[0-9]+");
-	int temp;
 	try
 	{
-		std::unordered_map<std::string, int>::iterator it = CTree::funMap.find(next);
+		std::unordered_map<std::string, int>::iterator it = CTree::funMap.find(value);
 		if (it == CTree::funMap.end())
 		{
-			throw std::exception();
+			throw std::length_error("");
 		}
 		else
 		{
 			return 1;
 		}
-		//temp = funMap[next];
-		//return 1;
 	}
-	catch (const std::exception&)
+	catch (const std::length_error&)
 	{
 
-		if (ifLetter(next))
+		if (ifLetter(value))
 		{
 			return 0;
 		}
@@ -446,9 +439,7 @@ void CTree::notRemove(std::string& expression,const std::regex& pattern, bool if
 
 void CTree::removeUnnesesary(std::string& expression, bool ifAdd)
 {
-	int currentSize = expression.size();
 	std::regex patternLetter("[a-zA-Z0-9]+");
-	std::regex patternNumber("[0-9]+");
 	std::regex patternOperator("[+-/*]");
 	while (expression != "")
 	{
@@ -466,17 +457,18 @@ void CTree::removeUnnesesary(std::string& expression, bool ifAdd)
 		}
 		else
 		{
+			zbior.insert(toMatch);
 			expression.erase(0, 1);
 		}
 	}
 
 }
 
-int CTree::indexOf(const std::string& arg) const
+int CTree::indexOf(const std::string& var) const
 {
 	for (int i = 0; i < args.size(); i++)
 	{
-		if (args[i] == arg)
+		if (args[i] == var)
 		{
 			return i;
 		}
@@ -505,12 +497,12 @@ std::string takeNext(std::string& expression)
 	return result;
 }
 
-bool ifLetter(const std::string& next)
+bool ifLetter(const std::string& value)
 {
 	std::regex patternLetter("[a-zA-Z]");
-	for (int i = 0; i < next.size(); i++)
+	for (int i = 0; i < value.size(); i++)
 	{
-		if (std::regex_match(std::string(1, next[i]), patternLetter))
+		if (std::regex_match(std::string(1, value[i]), patternLetter))
 		{
 			return true;
 		}

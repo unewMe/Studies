@@ -7,9 +7,9 @@ private:
 	CTree tree;
 	void enter(CTree& tree);
 	void comp();
-	void print();
+	void print() const;
 	void join();
-	void vars();
+	void vars() const;
 public:
 	void start();
 };

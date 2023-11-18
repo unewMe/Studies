@@ -12,19 +12,19 @@ private:
 	int whatAmI;
 public:
 	CNode();
-	CNode(std::string value);
-	CNode(std::string value,int whatAmI);
+	CNode(const std::string& value);
+	CNode(const std::string& value,const int whatAmI);
 	CNode(const CNode& node);
 	~CNode();
-	CNode* getChild(int index) const;
+	CNode* getChild(const int index) const;
 	std::string getValue() const;
 
 
 	int getWhatAmI()const ;
 	void pushChld(CNode* child);
-	void setChild(int index, CNode child);
-	void setValue(std::string value);
-	void setWhatAmI(int whatAmI);
+	void setChild(const int index, const CNode& child);
+	void setValue(const std::string& value);
+	void setWhatAmI(const int whatAmI);
 	void incrementChildrenCount();
 	int getChildrenCount() const;
 	std::string toString() const;

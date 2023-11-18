@@ -1,7 +1,7 @@
 #include"CNode.h"
 
 
-CNode::CNode(std::string value, int whatAmI)
+CNode::CNode(const std::string& value, const int whatAmI)
 {
 	this->value = value;
 	this->whatAmI = whatAmI;
@@ -27,7 +27,7 @@ int CNode::getChildrenCount() const
 	return childrenCount;
 }
 
-void CNode::setChild(int index, CNode child)
+void CNode::setChild(const int index,const CNode& child)
 {
 	children[index] = new CNode(child);
 }

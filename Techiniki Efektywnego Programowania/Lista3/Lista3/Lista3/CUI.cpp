@@ -81,7 +81,7 @@ void whatNoEntered(CTree& tree)
 	}
 }
 
-void CUI::vars()
+void CUI::vars() const
 {
 	if (!tree.ifTreeExists())
 	{
@@ -120,7 +120,7 @@ void CUI::comp()
 		std::cout<<tree.getArgsValueString();
 		tree.resetArgsValues();
 	}
-	catch (std::exception& e)
+	catch (std::length_error& e)
 	{
 		std::cout << "Wrong number of arguments" << std::endl;
 		return;
@@ -141,7 +141,7 @@ void CUI::join()
 	std::cout<<"Result: "<<tree.print()<<std::endl;
 }
 
-void CUI::print()
+void CUI::print() const
 {
 	if (!tree.ifTreeExists())
 	{
