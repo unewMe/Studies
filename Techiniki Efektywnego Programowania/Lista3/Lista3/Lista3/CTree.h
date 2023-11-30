@@ -3,7 +3,7 @@
 #include<iostream>
 #include<vector>
 #include <unordered_map>
-#include <set>
+#include <unordered_set>
 #include<regex>
 #define CONSTINT "1"
 
@@ -12,27 +12,27 @@ class CTree
 {
 private:
 	CNode* root;
-	std::vector<std::string> args;
-	std::unordered_map<std::string, int> argsValueMap;
-	std::unordered_map<std::string, int> argsCountMap;
-	std::set<std::string> zbior;
-	static std::unordered_map<std::string, int> funMap;
+	std::vector<std::string> vars;
+	std::unordered_map<std::string, int> varsValueMap;
+	std::unordered_map<std::string, int> varsCountMap;
+	std::unordered_set<std::string> unUsedElements;
+	static const std::unordered_map<std::string, int> funMap;
 
 	bool ifConstUsed;
 	bool checkRestOfExpresion(std::string& expression);
 
 	void removeUnnesesary(std::string& expression, bool ifAdd);
 	void notRemove(std::string& expression,const std::regex& pattern, bool ifAdd);
-	void printChild(const CNode* current, std::stringstream& stringBuffer) const;
 
-	int whatAmI(const std::string& value) const;
-	int indexOf(const std::string& expression) const;
+	NodeType whatAmI(const std::string& value) const;
+	int indexOfVar(const std::string& expression) const;
 	
 	double comp(const CNode* current);
 	CTree joinHelper(const CTree& tree) const;
 
-	CNode* getNodeBefore(CNode* current) const;
-	void addNextNode(CNode* current, std::string& expression);
+	CNode* addNextNode(std::string& expression);
+
+	void setElements(const CTree& current);
 	
 public:
 	CTree();
@@ -42,22 +42,24 @@ public:
 
 	bool enter(std::string expression);
 
-	double comp(std::string expression);
+	double comp(std::string variables);
 
 	CTree join(const CTree& tree) const;
 	CTree join(std::string expression) const;
 
-	std::vector<std::string> getArgs() const;
-	std::string print() const;
+	std::vector<std::string> getVars() const;
+	std::string toString() const;
 
 
-	void resetArgsValues();
+	void resetVarsValues();
 	void resetTree();
-	std::string unUsedElements() const;
-	std::string getArgsValueString();
+	void resetUnUsedElements();
+	std::string getUnUsedElements() const;
+	std::string getVarsValueString();
 	bool ifTreeExists() const;
 	bool checkIfConstUsed() const;
-	int getZbiorSize() const;
+	int getUnUsedElementsSize() const;
+
 
 	CTree& operator=(const CTree& tree);
 	CTree operator+(const CTree& tree);

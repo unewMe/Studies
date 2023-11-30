@@ -12,8 +12,8 @@ int main()
 //	std::cout<<tree.enter(expression)<<std::endl;
 //	CTree tree2;
 //	tree2 = tree.join("+ 2 c");
-//	std::cout<<tree2.print()<<std::endl;
-//	std::cout << tree.print() << std::endl;
+//	std::cout<<tree2.toString()<<std::endl;
+//	std::cout << tree.toString() << std::endl;
 //	std::cout << std::endl;
 //	//std::cout<<tree.comp("1") << std::endl;
 ////	std::cout << tree.comp("2 4") << std::endl;

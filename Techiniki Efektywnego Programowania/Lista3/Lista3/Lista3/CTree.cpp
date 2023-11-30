@@ -4,103 +4,72 @@
 #include<sstream>
 
 
-std::unordered_map<std::string, int> CTree::funMap = { {"+",2},{"-",2},{"*",2},{"/",2},{"sin",1},{"cos",1}};
+const std::unordered_map<std::string, int> CTree::funMap = { {"+",2},{"-",2},{"*",2},{"/",2},{"sin",1},{"cos",1}};
 bool ifLetter(const std::string& next);
-
 std::string takeNext(std::string& expression);
 
 
 CTree::CTree()
 {
 	root = nullptr;
+	ifConstUsed = false;
 }
 
 CTree::CTree(const CTree& tree)
 {
-	root = new CNode(*(tree.root));
-	args = tree.args;
-	argsValueMap = tree.argsValueMap;
-	argsCountMap = tree.argsCountMap;
+	setElements(tree);
 }
 
 CTree::~CTree()
 {
 	if (root != nullptr)
+	{
 		delete root;
+	}	
 }
 
 
 bool CTree::enter(std::string expression)
 {
-	std::string next = "";
-	while ((next = takeNext(expression)) != "")
-	{
-		removeUnnesesary(next, true);
-		if (next == "")
-		{
-
-		}
-		else
-		{
-			root = new CNode(next, whatAmI(next));
-			if ((*root).getWhatAmI() == 0)
-			{
-				args.push_back(next);
-				argsValueMap[next] = -1;
-				argsCountMap[next]++;
-				return checkRestOfExpresion(expression);
-			}
-			else if ((*root).getWhatAmI() == 1)
-			{
-				addNextNode(root, expression);
-				return checkRestOfExpresion(expression);
-			}
-			else
-			{
-				return checkRestOfExpresion(expression);
-			}
-
-		}
-	}
-	return false;
+	root = addNextNode(expression);
+	return true;
 }
 
-void CTree::addNextNode(CNode* current, std::string& expression)
+CNode* CTree::addNextNode(std::string& expression)
 {
 	int argsCount = 0;
-	if (current->getWhatAmI() == 1)
+	std::string next = takeNext(expression);
+	removeUnnesesary(next, true);
+	CNode* newNode;
+	if (next == "")
 	{
-		argsCount = funMap[current->getValue()];
+		newNode = new CNode(CONSTINT, whatAmI(next));
+		ifConstUsed = true;
 	}
-	else if (current->getWhatAmI() == 0)
+	else
 	{
-		if (argsValueMap[current->getValue()] == 0)
+		newNode = new CNode(next, whatAmI(next));
+	}
+	if (newNode->getWhatAmI() == NodeType::OPERATOR)
+	{
+		argsCount = funMap.at(newNode->getValue());
+		newNode->allocChildren(argsCount);
+	}
+	else if (newNode->getWhatAmI() == NodeType::VARIABLE)
+	{
+		if (varsValueMap[newNode->getValue()] == 0)
 		{
-			args.push_back(current->getValue());
-			argsValueMap[current->getValue()] = -1;
+			vars.push_back(newNode->getValue());
+			varsValueMap[newNode->getValue()] = -1;
 		}
-		argsCountMap[current->getValue()]++;
+		varsCountMap[newNode->getValue()]++;
 	}
 	while (argsCount > 0)
 	{
-		std::string next = takeNext(expression);
-		removeUnnesesary(next, true);
-		CNode* newNode;
-		if (next == "")
-		{
-			newNode = new CNode(CONSTINT, whatAmI(next));
-			ifConstUsed = true;
-		}
-		else
-		{
-			newNode = new CNode(next, whatAmI(next));
-			addNextNode(newNode, expression);
-
-		}
-		(*current).pushChld(newNode);
-		(*current).incrementChildrenCount();
+		newNode->pushChld(addNextNode(expression));
 		argsCount--;
 	}
+	return newNode;
 }
 
 bool CTree::checkRestOfExpresion(std::string& expression)
@@ -113,13 +82,13 @@ bool CTree::checkRestOfExpresion(std::string& expression)
 		if (next != "")
 		{
 			state = false;
-			zbior.insert(next);
+			unUsedElements.insert(next);
 		}
 	}
 	return state;
 }
 
-double CTree::comp(std::string expression)
+double CTree::comp(std::string variables)
 {
 
 	if (root == nullptr)
@@ -132,7 +101,7 @@ double CTree::comp(std::string expression)
 	std::string next = "";
 	std::regex patternNumber("[0-9]+");
 
-	while ((next = takeNext(expression)) != "")
+	while ((next = takeNext(variables)) != "")
 	{
 		notRemove(next, patternNumber, false);
 		if (next != "")
@@ -142,14 +111,14 @@ double CTree::comp(std::string expression)
 
 	}
 
-	if (argsValues.size() != args.size())
+	if (argsValues.size() != vars.size())
 	{
-		throw std::length_error("Bad number of vars");
+		throw std::length_error("Wrong number of vars");
 	}
 
-	for (int i = 0; i < args.size(); i++)
+	for (int i = 0; i < vars.size(); i++)
 	{
-		argsValueMap[args[i]] = std::stod(argsValues[i]);
+		varsValueMap[vars[i]] = std::stod(argsValues[i]);
 	}
 
 	return comp(root);
@@ -157,7 +126,7 @@ double CTree::comp(std::string expression)
 
 double CTree::comp(const CNode* current)
 {
-	if (current->getWhatAmI() == 1)
+	if (current->getWhatAmI() == NodeType::OPERATOR)
 	{
 		if (current->getValue() == "+")
 		{
@@ -189,9 +158,9 @@ double CTree::comp(const CNode* current)
 		}
 
 	}
-	else if (current->getWhatAmI() == 0)
+	else if (current->getWhatAmI() == NodeType::VARIABLE)
 	{
-		return argsValueMap[current->getValue()];
+		return varsValueMap[current->getValue()];
 	}
 	else
 	{
@@ -229,7 +198,7 @@ CTree CTree::join(std::string expression) const
 
 CTree CTree::joinHelper(const CTree& tree) const
 {
-	if (root == nullptr || root->getWhatAmI() != 1)
+	if (root == nullptr || root->getWhatAmI() != NodeType::OPERATOR)
 	{
 		return tree;
 	}
@@ -238,110 +207,71 @@ CTree CTree::joinHelper(const CTree& tree) const
 	CTree res;
 	res = *this;
 
-	CNode* nodeBefore = getNodeBefore(res.root);
+	CNode* nodeBefore = (*res.root).getNodeBefore();
 	int index = nodeBefore->getChildrenCount() - 1;
-	if (nodeBefore->getChild(index)->getWhatAmI() == 0)
+	if (nodeBefore->getChild(index)->getWhatAmI() == NodeType::VARIABLE)
 	{
-		if (res.argsCountMap[nodeBefore->getChild(index)->getValue()] == 1)
+		if (res.varsCountMap[nodeBefore->getChild(index)->getValue()] == 1)
 		{
-			res.argsCountMap.erase(nodeBefore->getChild(index)->getValue());
-			res.argsValueMap.erase(nodeBefore->getChild(index)->getValue());
-			res.args.erase(res.args.begin() + res.indexOf(nodeBefore->getChild(index)->getValue()));
+			res.varsCountMap.erase(nodeBefore->getChild(index)->getValue());
+			res.varsValueMap.erase(nodeBefore->getChild(index)->getValue());
+			res.vars.erase(res.vars.begin() + res.indexOfVar(nodeBefore->getChild(index)->getValue()));
 		}
 		else
 		{
-			res.argsCountMap[nodeBefore->getChild(index)->getValue()]--;
+			res.varsCountMap[nodeBefore->getChild(index)->getValue()]--;
 		}
 	}
-	delete (nodeBefore->getChild(index));
-	nodeBefore->setChild(index, *(tree.root));
+	//delete (nodeBefore->getChild(index)); //mozna do CNode przeniesisc
+	nodeBefore->setCopyChild(index, *(tree.root));
 
-	for (int i = 0; i < tree.args.size(); i++)
+	for (int i = 0; i < tree.vars.size(); i++)
 	{
-		res.argsCountMap[tree.args[i]]++;
-		res.argsValueMap[tree.args[i]] = -1;
-		res.args.push_back(tree.args[i]);
+		res.varsCountMap[tree.vars[i]]++;
+		res.varsValueMap[tree.vars[i]] = -1;
+		res.vars.push_back(tree.vars[i]);
 	}
 
 	return res;
 }
 
 
-CNode* CTree::getNodeBefore(CNode* current) const
+std::vector<std::string> CTree::getVars() const
 {
-	if (current->getChild(current->getChildrenCount() - 1)->getChildrenCount() <= 0)
-	{
-		return current;
-	}
-	else
-	{
-		return getNodeBefore(current->getChild(current->getChildrenCount() - 1));
-	}
+	return vars;
 }
 
-
-std::vector<std::string> CTree::getArgs() const
-{
-	return args;
-}
-
-std::string CTree::print() const
+std::string CTree::toString() const
 {
 	if (root == nullptr)
 	{
 		throw std::invalid_argument("Tree do not exsist");
 	}
-	std::stringstream stringBuffer;
-	printChild(root, stringBuffer);
-	return stringBuffer.str();
+	return root->toString();
 }
 
-void CTree::printChild(const CNode* current, std::stringstream& stringBuffer) const
-{
-	stringBuffer << (*current).getValue() << " ";
-	int counter = 0;
-	while (counter < (*current).getChildrenCount())
-	{
-		printChild((*current).getChild(counter), stringBuffer);
-		counter++;
-	}
-}
 
-int CTree:: whatAmI(const std::string& value) const
-{
-	try
-	{
-		std::unordered_map<std::string, int>::iterator it = CTree::funMap.find(value);
-		if (it == CTree::funMap.end())
-		{
-			throw std::length_error("");
-		}
-		else
-		{
-			return 1;
-		}
-	}
-	catch (const std::length_error&)
-	{
 
+NodeType CTree:: whatAmI(const std::string& value) const
+{
+	
+	std::unordered_map<std::string, int>::const_iterator it = CTree::funMap.find(value);
+	if (it == CTree::funMap.end())
+	{
 		if (ifLetter(value))
 		{
-			return 0;
+			return NodeType::VARIABLE;
 		}
 		else
 		{
-			return -1;
+			return NodeType::VALUE;
 		}
-
 	}
-
+	else
+	{
+		return NodeType::OPERATOR;
+	}
 }
-
-int CTree:: getZbiorSize() const
-{
-	return zbior.size();
-}
-
 
 
 CTree& CTree::operator=(const CTree& tree)
@@ -352,13 +282,25 @@ CTree& CTree::operator=(const CTree& tree)
 	}
 	else
 	{
-		delete root;
-		root = new CNode(*(tree.root));
-		args = tree.args;
-		argsValueMap = tree.argsValueMap;
-		argsCountMap = tree.argsCountMap;
+		if (root != nullptr)
+		{
+			delete root;
+		}
+		setElements(tree);
+		//root = new CNode(*(tree.root));
+		//vars = tree.vars;
+		//varsValueMap = tree.varsValueMap;
+		//varsCountMap = tree.varsCountMap;
 		return *this;
 	}
+}
+
+void CTree::setElements(const CTree& tree)
+{
+	root = new CNode(*(tree.root));
+	vars = tree.vars;
+	varsValueMap = tree.varsValueMap;
+	varsCountMap = tree.varsCountMap;
 }
 
 CTree CTree::operator+(const CTree& tree)
@@ -372,30 +314,41 @@ bool CTree::checkIfConstUsed() const
 	return ifConstUsed;
 }
 
-void CTree::resetArgsValues()
+void CTree::resetVarsValues()
 {
-	for (int i = 0; i < args.size(); i++)
+	for (int i = 0; i < vars.size(); i++)
 	{
-		argsValueMap[args[i]] = -1;
+		varsValueMap[vars[i]] = -1;
 	}
 }
 
-std::string CTree::unUsedElements() const
+
+int CTree::getUnUsedElementsSize() const
+{
+	return unUsedElements.size();
+}
+
+void CTree::resetUnUsedElements()
+{
+	unUsedElements.clear();
+}
+
+std::string CTree::getUnUsedElements() const
 {
 	std::stringstream res;
-	for (std::set<std::string>::iterator iterator = zbior.begin(); iterator != zbior.end(); ++iterator) 
+	for (std::unordered_set<std::string>::iterator iterator = unUsedElements.begin(); iterator != unUsedElements.end(); ++iterator) 
 	{
 		res << *iterator << " ";
 	}
 	return res.str();
 }
 
-std::string CTree::getArgsValueString()
+std::string CTree::getVarsValueString()
 {
 	std::stringstream res;
-	for (int i = 0; i < args.size(); i++)
+	for (int i = 0; i < vars.size(); i++)
 	{
-	res << args[i] + " = " + std::to_string(argsValueMap[args[i]]) + "\n";
+	res << vars[i] + " = " + std::to_string(varsValueMap[vars[i]]) + "\n";
 	}
 	return res.str();
 
@@ -405,10 +358,10 @@ void CTree::resetTree()
 {
 	delete root;
 	root = nullptr;
-	args.clear();
-	argsValueMap.clear();
-	argsCountMap.clear();
-	zbior.clear();
+	vars.clear();
+	varsValueMap.clear();
+	varsCountMap.clear();
+	unUsedElements.clear();
 	ifConstUsed= false;
 }
 
@@ -431,7 +384,7 @@ void CTree::notRemove(std::string& expression,const std::regex& pattern, bool if
 		}
 		else if (ifAdd)
 		{
-			zbior.insert(toMatch);
+			unUsedElements.insert(toMatch);
 		}
 	}
 	expression = res;
@@ -439,36 +392,40 @@ void CTree::notRemove(std::string& expression,const std::regex& pattern, bool if
 
 void CTree::removeUnnesesary(std::string& expression, bool ifAdd)
 {
-	std::regex patternLetter("[a-zA-Z0-9]+");
+	std::regex patternLetterAndNumber("[a-zA-Z0-9]+");
 	std::regex patternOperator("[+-/*]");
 	while (expression != "")
 	{
 		std::string toMatch(1, expression[0]);
-		if (std::regex_match(toMatch, patternLetter))
+		if (std::regex_match(toMatch, patternLetterAndNumber))
 		{
-			notRemove(expression, patternLetter, ifAdd);
+			notRemove(expression, patternLetterAndNumber, ifAdd);
 			return;
 		}
 		else if (std::regex_match(toMatch, patternOperator))
 		{
 			notRemove(expression, patternOperator, ifAdd);
+			for (int i = 1; i < expression.size(); i++)
+			{
+				unUsedElements.insert(std::string(1, expression[i]));
+			}
 			expression = toMatch;
 			return;
 		}
 		else
 		{
-			zbior.insert(toMatch);
+			unUsedElements.insert(toMatch);
 			expression.erase(0, 1);
 		}
 	}
 
 }
 
-int CTree::indexOf(const std::string& var) const
+int CTree::indexOfVar(const std::string& var) const
 {
-	for (int i = 0; i < args.size(); i++)
+	for (int i = 0; i < vars.size(); i++)
 	{
-		if (args[i] == var)
+		if (vars[i] == var)
 		{
 			return i;
 		}
@@ -499,6 +456,7 @@ std::string takeNext(std::string& expression)
 
 bool ifLetter(const std::string& value)
 {
+
 	std::regex patternLetter("[a-zA-Z]");
 	for (int i = 0; i < value.size(); i++)
 	{

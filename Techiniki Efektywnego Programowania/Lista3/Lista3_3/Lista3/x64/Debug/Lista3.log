@@ -1,0 +1,10 @@
+﻿  CNode.cpp
+  CTree.cpp
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3_3\Lista3\CTree.cpp(150,36): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3_3\Lista3\CTree.cpp(340,28): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3_3\Lista3\CTree.cpp(429,18): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3_3\Lista3\CTree.cpp(492,18): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+  CUI.cpp
+  main.cpp
+  Generowanie kodu...
+  Lista3.vcxproj -> C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3_3\x64\Debug\Lista3.exe

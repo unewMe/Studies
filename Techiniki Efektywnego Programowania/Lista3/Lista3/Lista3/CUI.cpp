@@ -4,6 +4,7 @@
 
 
 void whatNoEntered(CTree& tree);
+bool ifTreeNotExsist(const CTree& tree);
 
 void CUI::start()
 {
@@ -11,6 +12,8 @@ void CUI::start()
 	{
 		std::cout << "Enter command enter/comp/vars/join/print/exit" << std::endl;
 		std::string command;
+		//std::getline(std::cin, command);
+		//std::cin.clear();
 		std::cin >> command;
 		if (command == "enter")
 		{
@@ -48,6 +51,7 @@ void CUI::enter(CTree& tree)
 	tree.resetTree();
 	std::cout << "Enter expression" << std::endl;
 	std::string expression;
+	//std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	std::cin.ignore();
 	std::getline(std::cin, expression);
 	if (tree.enter(expression))
@@ -56,25 +60,20 @@ void CUI::enter(CTree& tree)
 	}
 	else
 	{
-		if (!tree.ifTreeExists())
-		{
-			std::cout << "Expression not entered" << std::endl;
-		}
-		else
-		{
-			whatNoEntered(tree);
-		}
+		std::cout << "Expression not entered" << std::endl;
 	}
 }
 
 void whatNoEntered(CTree& tree)
 {
-	std::cout << "Expression entered: " << tree.print() << std::endl;
-	if (tree.getZbiorSize() != 0)
+	std::cout << "Expression entered: " << tree.toString() << std::endl;
+	if (tree.getUnUsedElementsSize() != 0)
 	{
-		std::cout << "But some elements were not used: " << tree.unUsedElements() << std::endl;
+		std::cout << "But some elements were not used: " << tree.getUnUsedElements() << std::endl;
 	}
-	
+
+	tree.resetUnUsedElements();
+
 	if (tree.checkIfConstUsed())
 	{
 		std::cout << "Const(1) was used to fill gaps " << std::endl;
@@ -85,11 +84,11 @@ void CUI::vars() const
 {
 	if (!tree.ifTreeExists())
 	{
-		std::cout << "Expression not entered" << std::endl;
+		std::cout << "Expression do not exsist" << std::endl;
 		return;
 	}
 
-	std::vector<std::string> args = tree.getArgs();
+	std::vector<std::string> args = tree.getVars();
 	std::cout<<"Variables: ";
 	for (int i = 0; i < args.size(); i++)
 	{
@@ -102,27 +101,29 @@ void CUI::comp()
 {
 	if (!tree.ifTreeExists())
 	{
-		std::cout << "Expression not entered" << std::endl;
+		std::cout << "Expression do not exsist" << std::endl;
 		return;
 	}
-	std::string expression;
-	if (tree.getArgs().size() != 0)
+	std::string variables;
+	if (tree.getVars().size() != 0)
 	{
 		std::cout << "Enter value of variables" << std::endl;
+		//std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		std::cin.ignore();
-		std::getline(std::cin, expression);
+		std::getline(std::cin, variables);
 	}
 
 	double res = 0.0;
 	try
 	{
-		res = tree.comp(expression);
-		std::cout<<tree.getArgsValueString();
-		tree.resetArgsValues();
+		res = tree.comp(variables);
+		std::cout<<tree.getVarsValueString();
+		tree.resetVarsValues();
 	}
-	catch (std::length_error& e)
+	catch (std::length_error& a)
 	{
-		std::cout << "Wrong number of arguments" << std::endl;
+		std::cout<<a.what()<<std::endl;
+		/*std::cout << "Wrong number of variables" << std::endl;*/
 		return;
 	}
 	std::cout<<res<<std::endl;
@@ -132,22 +133,35 @@ void CUI::join()
 {
 	if (!tree.ifTreeExists())
 	{
-		std::cout << "Expression not entered" << std::endl;
+		std::cout << "Expression do not exsist" << std::endl;
 		return;
 	}
 	CTree tree2;
 	enter(tree2);
+	if (!tree2.ifTreeExists())
+	{
+		return;
+	}
 	tree = tree + tree2;
-	std::cout<<"Result: "<<tree.print()<<std::endl;
+	std::cout<<"Result: "<<tree.toString()<<std::endl;
 }
 
 void CUI::print() const
 {
 	if (!tree.ifTreeExists())
 	{
-		std::cout << "Expression not entered" << std::endl;
+		std::cout << "Expression do not exsist" << std::endl;
 		return;
 	}
-	
-	std::cout << "Expression: " << tree.print() << std::endl;
+	std::cout << "Expression: " << tree.toString() << std::endl;
+}
+
+bool ifTreeNotExsist(const CTree& tree)
+{
+	if (!tree.ifTreeExists())
+	{
+		std::cout << "Expression do not exsist" << std::endl;
+		return true;
+	}
+	return false;
 }
