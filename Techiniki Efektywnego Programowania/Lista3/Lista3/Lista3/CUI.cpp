@@ -1,7 +1,4 @@
 #include"CUI.h"
-#include<string>
-
-
 
 void whatNoEntered(CTree& tree);
 bool ifTreeNotExsist(const CTree& tree);
@@ -64,8 +61,10 @@ void CUI::enter(CTree& tree)
 	}
 }
 
+
 void whatNoEntered(CTree& tree)
 {
+
 	std::cout << "Expression entered: " << tree.toString() << std::endl;
 	if (tree.getUnUsedElementsSize() != 0)
 	{

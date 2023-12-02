@@ -1,6 +1,8 @@
 #pragma once
 #include"CTree.h"
-
+#include<unordered_set>
+#include<string>
+#include<sstream>
 class CUI
 {
 private:

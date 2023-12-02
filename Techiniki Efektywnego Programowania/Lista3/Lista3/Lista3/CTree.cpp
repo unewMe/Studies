@@ -41,28 +41,35 @@ CNode* CTree::addNextNode(std::string& expression)
 	std::string next = takeNext(expression);
 	removeUnnesesary(next, true);
 	CNode* newNode;
+	NodeType newNodeType;
+	std::string newNodeValue = "";
 	if (next == "")
 	{
-		newNode = new CNode(CONSTINT, whatAmI(next));
+		newNodeType = NodeType::VALUE;
+		newNodeValue = CONSTINT;
+		newNode = new CNode(CONSTINT, newNodeType);
 		ifConstUsed = true;
 	}
 	else
 	{
-		newNode = new CNode(next, whatAmI(next));
+		newNodeType = whatNodeIs(next);
+		newNodeValue = next;
+		newNode = new CNode(next,newNodeType);
 	}
-	if (newNode->getWhatAmI() == NodeType::OPERATOR)
+
+	if (newNodeType == NodeType::OPERATOR)
 	{
 		argsCount = funMap.at(newNode->getValue());
 		newNode->allocChildren(argsCount);
 	}
-	else if (newNode->getWhatAmI() == NodeType::VARIABLE)
+	else if (newNodeType == NodeType::VARIABLE)
 	{
-		if (varsValueMap[newNode->getValue()] == 0)
+		if (varsValueMap[newNodeValue] == 0)
 		{
-			vars.push_back(newNode->getValue());
-			varsValueMap[newNode->getValue()] = -1;
+			vars.push_back(newNodeValue);
+			varsValueMap[newNodeValue] = -1;
 		}
-		varsCountMap[newNode->getValue()]++;
+		varsCountMap[newNodeValue]++;
 	}
 	while (argsCount > 0)
 	{
@@ -126,29 +133,31 @@ double CTree::comp(std::string variables)
 
 double CTree::comp(const CNode* current)
 {
-	if (current->getWhatAmI() == NodeType::OPERATOR)
+	NodeType type = current->getWhatAmI();
+	if (type == NodeType::OPERATOR)
 	{
-		if (current->getValue() == "+")
+		std::string value = current->getValue();
+		if (value == "+")
 		{
 			return comp(current->getChild(0)) + comp(current->getChild(1));
 		}
-		else if (current->getValue() == "-")
+		else if (value == "-")
 		{
 			return comp(current->getChild(0)) - comp(current->getChild(1));
 		}
-		else if (current->getValue() == "*")
+		else if (value == "*")
 		{
 			return comp(current->getChild(0)) * comp(current->getChild(1));
 		}
-		else if (current->getValue() == "/")
+		else if (value == "/")
 		{
 			return comp(current->getChild(0)) / comp(current->getChild(1));
 		}
-		else if (current->getValue() == "sin")
+		else if (value == "sin")
 		{
 			return sin(comp(current->getChild(0)));
 		}
-		else if (current->getValue() == "cos")
+		else if (value == "cos")
 		{
 			return cos(comp(current->getChild(0)));
 		}
@@ -158,7 +167,7 @@ double CTree::comp(const CNode* current)
 		}
 
 	}
-	else if (current->getWhatAmI() == NodeType::VARIABLE)
+	else if (type == NodeType::VARIABLE)
 	{
 		return varsValueMap[current->getValue()];
 	}
@@ -198,7 +207,7 @@ CTree CTree::join(std::string expression) const
 
 CTree CTree::joinHelper(const CTree& tree) const
 {
-	if (root == nullptr || root->getWhatAmI() != NodeType::OPERATOR)
+	if (root->getWhatAmI() != NodeType::OPERATOR) // root == nullptr || 
 	{
 		return tree;
 	}
@@ -209,17 +218,20 @@ CTree CTree::joinHelper(const CTree& tree) const
 
 	CNode* nodeBefore = (*res.root).getNodeBefore();
 	int index = nodeBefore->getChildrenCount() - 1;
+	CNode* nodeToRemove =nodeBefore->getChild(index);
+	
 	if (nodeBefore->getChild(index)->getWhatAmI() == NodeType::VARIABLE)
 	{
-		if (res.varsCountMap[nodeBefore->getChild(index)->getValue()] == 1)
+		std::string valueOfNodeToRemove = nodeToRemove->getValue();
+		if (res.varsCountMap[valueOfNodeToRemove] == 1)
 		{
-			res.varsCountMap.erase(nodeBefore->getChild(index)->getValue());
-			res.varsValueMap.erase(nodeBefore->getChild(index)->getValue());
-			res.vars.erase(res.vars.begin() + res.indexOfVar(nodeBefore->getChild(index)->getValue()));
+			res.varsCountMap.erase(valueOfNodeToRemove);
+			res.varsValueMap.erase(valueOfNodeToRemove);
+			res.vars.erase(res.vars.begin() + res.indexOfVar(valueOfNodeToRemove));
 		}
 		else
 		{
-			res.varsCountMap[nodeBefore->getChild(index)->getValue()]--;
+			res.varsCountMap[valueOfNodeToRemove]--;
 		}
 	}
 	//delete (nodeBefore->getChild(index)); //mozna do CNode przeniesisc
@@ -252,7 +264,7 @@ std::string CTree::toString() const
 
 
 
-NodeType CTree:: whatAmI(const std::string& value) const
+NodeType CTree:: whatNodeIs(const std::string& value) const
 {
 	
 	std::unordered_map<std::string, int>::const_iterator it = CTree::funMap.find(value);
@@ -343,6 +355,11 @@ std::string CTree::getUnUsedElements() const
 	return res.str();
 }
 
+std::unordered_set<std::string> CTree::getUnUsedElements2() const
+{
+	return unUsedElements;
+}
+
 std::string CTree::getVarsValueString()
 {
 	std::stringstream res;
@@ -392,11 +409,40 @@ void CTree::notRemove(std::string& expression,const std::regex& pattern, bool if
 
 void CTree::removeUnnesesary(std::string& expression, bool ifAdd)
 {
+	//std::regex patternLetterAndNumber("[a-zA-Z0-9]+");
+	//std::regex patternOperator("[+-/*]");
+	//while (expression != "")
+	//{
+	//	std::string toMatch(1, expression[0]);
+	//	if (std::regex_match(toMatch, patternLetterAndNumber))
+	//	{
+	//		notRemove(expression, patternLetterAndNumber, ifAdd);
+	//		return;
+	//	}
+	//	else if (std::regex_match(toMatch, patternOperator))
+	//	{
+	//		notRemove(expression, patternOperator, ifAdd);
+	//		for (int i = 1; i < expression.size(); i++)
+	//		{
+	//			unUsedElements.insert(std::string(1, expression[i]));
+	//		}
+	//		expression = toMatch;
+	//		return;
+	//	}
+	//	else
+	//	{
+	//		unUsedElements.insert(toMatch);
+	//		expression.erase(0, 1);
+	//	}
+	//}
 	std::regex patternLetterAndNumber("[a-zA-Z0-9]+");
 	std::regex patternOperator("[+-/*]");
-	while (expression != "")
+	std::regex noPattern("^$");
+	int currentSize = expression.size();
+	int index = 0;
+	while (index<currentSize)
 	{
-		std::string toMatch(1, expression[0]);
+		std::string toMatch(1, expression[index]);
 		if (std::regex_match(toMatch, patternLetterAndNumber))
 		{
 			notRemove(expression, patternLetterAndNumber, ifAdd);
@@ -404,21 +450,18 @@ void CTree::removeUnnesesary(std::string& expression, bool ifAdd)
 		}
 		else if (std::regex_match(toMatch, patternOperator))
 		{
-			notRemove(expression, patternOperator, ifAdd);
-			for (int i = 1; i < expression.size(); i++)
-			{
-				unUsedElements.insert(std::string(1, expression[i]));
-			}
+			expression.erase(index, 1);
+			notRemove(expression, noPattern, ifAdd);
 			expression = toMatch;
 			return;
 		}
 		else
 		{
 			unUsedElements.insert(toMatch);
-			expression.erase(0, 1);
 		}
+		index++;
 	}
-
+	expression = "";
 }
 
 int CTree::indexOfVar(const std::string& var) const
@@ -437,20 +480,36 @@ int CTree::indexOfVar(const std::string& var) const
 std::string takeNext(std::string& expression)
 {
 	int currentSize = expression.size();
+	int index = 0;
 	std::string result = "";
-	while (currentSize > 0 && expression[0] == ' ')
+	std::string newExpression = "";
+	//while (currentSize > 0 && expression[0] == ' ')
+	//{
+	//	expression.erase(0, 1);
+	//	currentSize--;
+	//}
+
+	//while (currentSize > 0 && expression[0] != ' ')
+	//{
+	//	result += expression[0];
+	//	expression.erase(0, 1);
+	//	currentSize--;
+	//}
+	while (index<currentSize && expression[index] == ' ')
 	{
-		expression.erase(0, 1);
-		currentSize--;
+		index++;
 	}
 
-	while (currentSize > 0 && expression[0] != ' ')
+	while (index<currentSize && expression[index] != ' ')
 	{
-		result += expression[0];
-		expression.erase(0, 1);
-		currentSize--;
+		result += expression[index];
+		index++;
+	} 
+	while (index < currentSize)
+	{
+		newExpression += expression[index++];
 	}
-
+	expression = newExpression;
 	return result;
 }
 

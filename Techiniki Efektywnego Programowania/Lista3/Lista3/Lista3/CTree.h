@@ -24,8 +24,8 @@ private:
 	void removeUnnesesary(std::string& expression, bool ifAdd);
 	void notRemove(std::string& expression,const std::regex& pattern, bool ifAdd);
 
-	NodeType whatAmI(const std::string& value) const;
-	int indexOfVar(const std::string& expression) const;
+	NodeType whatNodeIs(const std::string& value) const;
+	int indexOfVar(const std::string& variable) const;
 	
 	double comp(const CNode* current);
 	CTree joinHelper(const CTree& tree) const;
@@ -55,6 +55,7 @@ public:
 	void resetTree();
 	void resetUnUsedElements();
 	std::string getUnUsedElements() const;
+	std::unordered_set<std::string> getUnUsedElements2() const;
 	std::string getVarsValueString();
 	bool ifTreeExists() const;
 	bool checkIfConstUsed() const;
