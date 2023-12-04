@@ -1,13 +1,9 @@
-﻿  CTree.cpp
-C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\Lista3\CTree.cpp(9,18): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
-C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\Lista3\CTree.cpp(29,18): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
-C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\Lista3\CTree.cpp(44,18): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
-C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\Lista3\CTree.cpp(99,6): warning C4101: "temp": lokalna zmienna, do której nie istnieje odwołanie
-C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\Lista3\CTree.cpp(243,36): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
+﻿  CNode.cpp
+  CTree.cpp
+  CUI.cpp
   main.cpp
   Trwa generowanie kodu
-  24 of 1168 functions ( 2.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    27 functions had inline decision re-evaluated but remain unchanged
+  Compiler switch has changed, fall back to full compilation.
+  All 1349 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Zakończono generowanie kodu
   Lista3.vcxproj -> C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\x64\Release\Lista3.exe

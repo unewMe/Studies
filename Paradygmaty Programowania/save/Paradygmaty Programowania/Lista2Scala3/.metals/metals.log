@@ -1,0 +1,39 @@
+2023.10.21 20:34:53 INFO  Started: Metals version 1.1.0 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista2Scala3' for client Visual Studio Code 1.83.1.
+2023.10.21 20:34:54 WARN  Build server is not auto-connectable.
+2023.10.21 20:34:54 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista2Scala3\src\main\scala\Debug.scala
+2023.10.21 20:35:00 INFO  no build target found for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista2Scala3\src\main\scala\Debug.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2023.10.21 20:35:02 INFO  time: code lens generation in 7.08s
+2023.10.21 20:36:09 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista2Scala3\src\main\scala\Debug.scala
+paü 21, 2023 8:36:26 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista2Scala3\.metals\.reports\metals-full\2023-10-21\r_compiler-error_20-36-26-303.md
+2023.10.21 20:36:55 WARN  Could not find semantic tokens for: file:///C:/Users/chudz/Desktop/Dawid/Paradygmaty%20Programowania/Lista2Scala3/src/main/scala/Debug.scala
+2023.10.21 20:37:19 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista2Scala3\src\main\scala\Debug.scala
+2023.10.21 20:37:19 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista2Scala3\src\main\scala\Debug.scala
+paü 21, 2023 8:37:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 193
+2023.10.21 20:37:19 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista2Scala3\src\main\scala\Debug.scala
+2023.10.21 20:38:53 INFO  Shutting down server
+2023.10.21 20:38:53 INFO  shutting down Metals
+2023.10.21 20:38:53 INFO  Exiting server
+2023.10.21 20:38:53 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+
+2023.10.23 12:06:59 INFO  Started: Metals version 1.1.0 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista2Scala3' for client Visual Studio Code 1.83.1.
+2023.10.23 12:07:00 WARN  Build server is not auto-connectable.
+2023.10.23 12:07:00 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista2Scala3\src\main\scala\Debug.scala
+2023.10.23 12:07:07 INFO  no build target found for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista2Scala3\src\main\scala\Debug.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2023.10.23 12:07:11 INFO  time: code lens generation in 9.77s
+2023.10.23 12:07:13 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista2Scala3\src\main\scala\Debug.scala
+2023.10.23 12:07:13 INFO  Shutting down server
+2023.10.23 12:07:13 INFO  shutting down Metals
+2023.10.23 12:07:13 INFO  Exiting server

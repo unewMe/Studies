@@ -1,0 +1,381 @@
+2023.10.12 17:07:25 INFO  Started: Metals version 1.0.1 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\hello-world' for client Visual Studio Code 1.83.1.
+paü 12, 2023 5:07:25 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+paü 12, 2023 5:07:25 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+paü 12, 2023 5:07:25 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+paü 12, 2023 5:07:26 PM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\hello-world\.metals\metals (H2 2.1)
+paü 12, 2023 5:07:26 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory allAppliedMigrations
+INFO: Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+paü 12, 2023 5:07:26 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.023s)
+paü 12, 2023 5:07:26 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory create
+INFO: Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+paü 12, 2023 5:07:26 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": << Empty Schema >>
+paü 12, 2023 5:07:26 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "1 - Create tables"
+paü 12, 2023 5:07:26 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "2 - Server discovery"
+paü 12, 2023 5:07:26 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "3 - Jar symbols"
+paü 12, 2023 5:07:26 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "4 - Fingerprints"
+paü 12, 2023 5:07:26 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.027s)
+2023.10.12 17:07:26 INFO  time: initialize in 0.67s
+2023.10.12 17:07:28 WARN  Build server is not auto-connectable.
+2023.10.12 17:07:28 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\hello-world\src\main\scala\Main.scala
+2023.10.12 17:07:32 INFO  no build target found for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\hello-world\src\main\scala\Main.scala. Using presentation compiler with project's scala-library version: 3.3.0
+2023.10.12 17:07:34 INFO  time: code lens generation in 1.46s
+2023.10.12 17:07:49 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\hello-world\src\main\scala\Main.scala
+2023.10.12 17:08:10 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\hello-world\src\main\scala\Main.scala
+2023.10.12 17:08:37 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\hello-world\src\main\scala\Main.scala
+2023.10.12 17:08:37 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\hello-world\src\main\scala\Main.scala
+2023.10.12 17:08:51 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\hello-world\src\main\scala\Main.scala
+Exception in thread "pool-3-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:229)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+paü 12, 2023 5:10:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 194
+2023.10.12 17:10:11 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\hello-world\src\main\scala\Main.scala
+paü 12, 2023 5:11:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 346
+Exception in thread "pool-3-thread-2" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:229)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Exception in thread "pool-3-thread-3" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:229)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023.10.12 17:11:19 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\hello-world\src\main\scala\Main.scala
+2023.10.12 17:11:25 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\hello-world\src\main\scala\Main.scala
+2023.10.12 17:11:37 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\hello-world\src\main\scala\Main.scala
+2023.10.12 17:11:49 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\hello-world\src\main\scala\Main.scala
+paü 12, 2023 5:11:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 418
+Exception in thread "pool-3-thread-4" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:229)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023.10.12 17:12:30 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\hello-world\src\main\scala\Main.scala
+2023.10.12 17:12:43 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\hello-world\src\main\scala\Main.scala
+2023.10.12 17:12:51 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\hello-world\src\main\scala\Main.scala
+2023.10.12 17:13:02 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\hello-world\src\main\scala\Main.scala
+2023.10.12 17:13:59 INFO  Shutting down server
+2023.10.12 17:13:59 INFO  shutting down Metals
+2023.10.12 17:13:59 INFO  Exiting server
+2023.10.12 17:14:37 INFO  Started: Metals version 1.0.1 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale' for client Visual Studio Code 1.83.1.
+paü 12, 2023 5:14:38 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+paü 12, 2023 5:14:38 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+paü 12, 2023 5:14:38 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+paü 12, 2023 5:14:38 PM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\.metals\metals (H2 2.1)
+paü 12, 2023 5:14:38 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.025s)
+paü 12, 2023 5:14:38 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+paü 12, 2023 5:14:38 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.10.12 17:14:38 INFO  time: initialize in 0.56s
+2023.10.12 17:14:40 WARN  Build server is not auto-connectable.
+2023.10.12 17:14:40 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.12 17:14:44 INFO  no build target found for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala. Using presentation compiler with project's scala-library version: 3.3.0
+2023.10.12 17:14:46 INFO  time: code lens generation in 2.12s
+2023.10.12 17:15:13 INFO  Shutting down server
+2023.10.12 17:15:13 INFO  shutting down Metals
+2023.10.12 17:15:13 INFO  Exiting server
+2023.10.13 21:16:59 INFO  Started: Metals version 1.0.1 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale' for client Visual Studio Code 1.83.1.
+paü 13, 2023 9:16:59 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+paü 13, 2023 9:16:59 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+paü 13, 2023 9:16:59 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+paü 13, 2023 9:17:00 PM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\.metals\metals (H2 2.1)
+paü 13, 2023 9:17:00 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.029s)
+paü 13, 2023 9:17:00 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+paü 13, 2023 9:17:00 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.10.13 21:17:00 INFO  time: initialize in 0.65s
+2023.10.13 21:17:03 WARN  Build server is not auto-connectable.
+2023.10.13 21:17:03 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.13 21:17:03 INFO  skipping build import with status 'Dismissed'
+2023.10.13 23:09:31 INFO  Started: Metals version 1.0.1 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale' for client Visual Studio Code 1.83.1.
+paü 13, 2023 11:09:31 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+paü 13, 2023 11:09:31 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+paü 13, 2023 11:09:31 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+paü 13, 2023 11:09:35 PM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\.metals\metals (H2 2.1)
+paü 13, 2023 11:09:35 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.032s)
+paü 13, 2023 11:09:35 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+paü 13, 2023 11:09:35 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.10.13 23:09:35 INFO  time: initialize in 4.13s
+2023.10.13 23:09:37 WARN  Build server is not auto-connectable.
+2023.10.13 23:09:37 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.13 23:09:37 INFO  skipping build import with status 'Dismissed'
+2023.10.13 23:09:41 INFO  no build target found for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala. Using presentation compiler with project's scala-library version: 3.3.0
+2023.10.13 23:09:44 INFO  time: code lens generation in 2.18s
+2023.10.13 23:10:46 INFO  Shutting down server
+2023.10.13 23:10:46 INFO  shutting down Metals
+2023.10.13 23:10:46 INFO  Exiting server
+2023.10.13 23:58:08 INFO  Started: Metals version 1.0.1 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale' for client Visual Studio Code 1.83.1.
+paü 13, 2023 11:58:08 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+paü 13, 2023 11:58:08 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+paü 13, 2023 11:58:08 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+paü 13, 2023 11:58:08 PM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\.metals\metals (H2 2.1)
+paü 13, 2023 11:58:08 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.040s)
+paü 13, 2023 11:58:08 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+paü 13, 2023 11:58:08 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.10.13 23:58:09 INFO  time: initialize in 0.74s
+2023.10.13 23:58:11 WARN  Build server is not auto-connectable.
+2023.10.13 23:58:11 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.13 23:58:11 INFO  skipping build import with status 'Dismissed'
+2023.10.13 23:58:15 INFO  no build target found for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala. Using presentation compiler with project's scala-library version: 3.3.0
+paü 13, 2023 11:58:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+paü 13, 2023 11:58:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4
+paü 13, 2023 11:58:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7
+paü 13, 2023 11:58:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 20
+paü 13, 2023 11:58:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 17
+paü 13, 2023 11:58:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 21
+paü 13, 2023 11:58:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 26
+2023.10.13 23:58:18 INFO  time: code lens generation in 2.15s
+2023.10.13 23:58:18 INFO  time: code lens generation in 2.1s
+2023.10.13 23:58:18 INFO  time: code lens generation in 2.51s
+2023.10.13 23:58:18 INFO  time: code lens generation in 2.23s
+paü 13, 2023 11:58:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 52
+2023.10.13 23:59:00 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+Exception in thread "pool-3-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:229)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Exception in thread "pool-3-thread-2" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:229)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023.10.13 23:59:04 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+Exception in thread "pool-3-thread-3" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:229)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023.10.13 23:59:04 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+paü 13, 2023 11:59:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 183
+2023.10.13 23:59:05 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.13 23:59:05 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.13 23:59:05 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+paü 13, 2023 11:59:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 188
+2023.10.13 23:59:05 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.13 23:59:15 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.13 23:59:15 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.13 23:59:15 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.13 23:59:17 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.13 23:59:28 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.13 23:59:52 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.14 00:00:10 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.14 00:00:40 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.14 00:00:53 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+paü 14, 2023 12:03:04 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 332
+2023.10.14 00:03:08 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.14 00:04:09 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.14 00:08:03 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.14 00:08:03 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.14 00:09:10 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.14 00:09:11 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.14 00:10:59 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+Exception in thread "pool-3-thread-4" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:229)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023.10.14 00:11:45 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.14 00:11:46 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+paü 14, 2023 12:11:46 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 727
+paü 14, 2023 12:11:46 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 728
+2023.10.14 00:11:46 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.14 00:11:57 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.14 00:22:02 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.14 00:37:27 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\test.scala
+2023.10.14 00:37:27 WARN  Could not find semantic tokens for: file:///C:/Users/chudz/Desktop/Dawid/Paradygmaty%20Programowania/New/lista1scale/src/main/scala/test.scala
+2023.10.14 00:37:30 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\test.scala
+2023.10.14 00:39:12 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\test.scala
+2023.10.14 00:39:53 ERROR Failed to tokenize input for semantic tokens for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\test.scala
+scala.meta.tokenizers.TokenizeException: <input>:8: error: Invalid literal number
+        9n.head) factorial(n - 1)
+        ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.checkNoLetter(LegacyScanner.scala:856)
+	at scala.meta.internal.tokenizers.LegacyScanner.restOfUncertainToken$1(LegacyScanner.scala:900)
+	at scala.meta.internal.tokenizers.LegacyScanner.getNumber(LegacyScanner.scala:908)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:368)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:246)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1047)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:511)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+
+2023.10.14 00:40:17 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\test.scala
+Exception in thread "pool-3-thread-5" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:229)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023.10.14 00:40:38 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\test.scala
+2023.10.14 00:40:57 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\test.scala
+2023.10.14 01:06:09 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\test.scala
+2023.10.14 01:31:04 INFO  Shutting down server
+2023.10.14 01:31:04 INFO  shutting down Metals
+2023.10.14 01:31:04 INFO  Exiting server
+2023.10.14 21:31:54 INFO  Started: Metals version 1.0.1 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale' for client Visual Studio Code 1.83.1.
+paü 14, 2023 9:31:54 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+paü 14, 2023 9:31:54 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+paü 14, 2023 9:31:54 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+2023.10.14 21:43:16 INFO  Started: Metals version 1.0.1 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale' for client Visual Studio Code 1.83.1.
+paü 14, 2023 9:43:16 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+paü 14, 2023 9:43:16 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+paü 14, 2023 9:43:16 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+paü 14, 2023 9:43:17 PM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\.metals\metals (H2 2.1)
+paü 14, 2023 9:43:17 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.027s)
+paü 14, 2023 9:43:17 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+paü 14, 2023 9:43:17 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.10.14 21:43:17 INFO  time: initialize in 0.64s
+2023.10.14 21:43:19 WARN  Build server is not auto-connectable.
+2023.10.14 21:43:19 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.14 21:43:19 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\test.scala
+2023.10.14 21:43:19 INFO  skipping build import with status 'Dismissed'
+2023.10.14 21:43:23 INFO  no build target found for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala. Using presentation compiler with project's scala-library version: 3.3.0
+2023.10.14 21:43:25 INFO  time: code lens generation in 1.96s
+2023.10.14 21:43:55 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.14 21:44:14 INFO  Shutting down server
+2023.10.14 21:44:14 INFO  shutting down Metals
+2023.10.14 21:44:14 INFO  Exiting server
+2023.10.14 21:44:55 INFO  Started: Metals version 1.0.1 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale' for client Visual Studio Code 1.83.1.
+paü 14, 2023 9:44:55 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+paü 14, 2023 9:44:55 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+paü 14, 2023 9:44:55 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+paü 14, 2023 9:44:56 PM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\.metals\metals (H2 2.1)
+paü 14, 2023 9:44:56 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.023s)
+paü 14, 2023 9:44:56 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+paü 14, 2023 9:44:56 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.10.14 21:44:56 INFO  time: initialize in 0.55s
+2023.10.14 21:44:59 WARN  Build server is not auto-connectable.
+2023.10.16 11:28:46 INFO  Started: Metals version 1.0.1 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale' for client Visual Studio Code 1.83.1.
+paü 16, 2023 11:28:46 AM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+paü 16, 2023 11:28:46 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+paü 16, 2023 11:28:46 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+paü 16, 2023 11:28:50 AM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\.metals\metals (H2 2.1)
+paü 16, 2023 11:28:50 AM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.035s)
+paü 16, 2023 11:28:50 AM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+paü 16, 2023 11:28:50 AM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.10.16 11:28:50 INFO  time: initialize in 4.26s
+2023.10.16 11:28:53 WARN  Build server is not auto-connectable.
+2023.10.16 11:28:53 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala
+2023.10.16 11:28:53 INFO  skipping build import with status 'Dismissed'
+2023.10.16 11:28:57 INFO  no build target found for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Main.scala. Using presentation compiler with project's scala-library version: 3.3.0
+2023.10.16 11:29:00 INFO  time: code lens generation in 2.12s
+2023.10.16 11:30:05 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Test.worksheet.sc
+2023.10.16 11:30:24 INFO  time: evaluated worksheet 'Test.worksheet.sc' in 18s
+2023.10.16 11:30:25 INFO  no build target found for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scale\src\main\scala\Test.worksheet.sc. Using presentation compiler with project's scala-library version: 3.3.0
+2023.10.16 11:30:51 INFO  Shutting down server
+2023.10.16 11:30:51 INFO  shutting down Metals
+2023.10.16 11:30:51 INFO  Exiting server

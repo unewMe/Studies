@@ -1,0 +1,8 @@
+﻿  CTree.cpp
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\Lista3\CTree.cpp(323,28): warning C4267: "return": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\Lista3\CTree.cpp(391,18): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\Lista3\CTree.cpp(415,18): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\Lista3\CTree.cpp(427,20): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\Lista3\CTree.cpp(470,18): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\Lista3\CTree.cpp(498,17): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+  Lista3.vcxproj -> C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista3\Lista3\x64\Debug\Lista3.exe

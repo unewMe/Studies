@@ -1,0 +1,32 @@
+def imply1(liczba:Int) : Int =
+  liczba match
+  {
+    case 0 => 0
+    case 1 => 1
+    case _ => imply1(liczba-2) + imply1(liczba-1)
+  }
+
+def imply1Tail(liczba:Int) : Int =
+  {
+    def implyHelp(n: Int, liczbaO2: Int, liczbaO1: Int): Int =
+    {
+      n match
+      {
+        case `liczba` if n == liczba => liczbaO2 + liczbaO1
+        case _ => implyHelp(n+1,liczbaO1,liczbaO2+liczbaO1)
+      }
+    }
+
+    liczba match
+    {
+      case 0 => 0
+      case 1 => 1
+      case _ => implyHelp(2,0,1)
+    }
+
+  }
+
+imply1(6)
+imply1Tail(6)
+
+

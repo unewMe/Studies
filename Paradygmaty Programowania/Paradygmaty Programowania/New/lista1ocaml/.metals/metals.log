@@ -1,0 +1,65 @@
+2023.10.12 17:02:30 INFO  Started: Metals version 1.0.1 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1ocaml' for client Visual Studio Code 1.82.0.
+paü 12, 2023 5:02:30 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+paü 12, 2023 5:02:30 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+paü 12, 2023 5:02:30 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+paü 12, 2023 5:02:31 PM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1ocaml\.metals\metals (H2 2.1)
+paü 12, 2023 5:02:31 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory allAppliedMigrations
+INFO: Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+paü 12, 2023 5:02:31 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.047s)
+paü 12, 2023 5:02:31 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory create
+INFO: Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+paü 12, 2023 5:02:31 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": << Empty Schema >>
+paü 12, 2023 5:02:31 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "1 - Create tables"
+paü 12, 2023 5:02:31 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "2 - Server discovery"
+paü 12, 2023 5:02:31 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "3 - Jar symbols"
+paü 12, 2023 5:02:31 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "4 - Fingerprints"
+paü 12, 2023 5:02:31 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.047s)
+2023.10.12 17:02:31 INFO  time: initialize in 1.23s
+2023.10.12 17:02:34 WARN  Build server is not auto-connectable.
+2023.10.12 17:02:34 WARN  no build tool detected in workspace 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1ocaml'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.10.12 17:02:42 WARN  no build tool detected in workspace 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1ocaml'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.10.12 17:02:43 WARN  no build tool detected in workspace 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1ocaml'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.10.12 17:02:42 WARN  no build tool detected in workspace 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1ocaml'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.10.12 17:02:44 WARN  no build tool detected in workspace 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1ocaml'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.10.12 17:02:44 WARN  no build tool detected in workspace 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1ocaml'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.10.12 17:02:49 INFO  Shutting down server
+2023.10.12 17:02:49 INFO  shutting down Metals
+2023.10.12 17:02:49 INFO  Exiting server
+2023.10.16 11:28:23 INFO  Started: Metals version 1.0.1 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1ocaml' for client Visual Studio Code 1.83.1.
+paü 16, 2023 11:28:24 AM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+paü 16, 2023 11:28:24 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+paü 16, 2023 11:28:24 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+paü 16, 2023 11:28:24 AM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1ocaml\.metals\metals (H2 2.1)
+paü 16, 2023 11:28:24 AM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.029s)
+paü 16, 2023 11:28:24 AM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+paü 16, 2023 11:28:24 AM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.10.16 11:28:24 INFO  time: initialize in 0.67s
+2023.10.16 11:28:26 WARN  Build server is not auto-connectable.
+2023.10.16 11:28:26 WARN  no build tool detected in workspace 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1ocaml'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.10.16 11:28:40 INFO  Shutting down server
+2023.10.16 11:28:40 INFO  shutting down Metals
+2023.10.16 11:28:40 INFO  Exiting server
+2023.11.03 13:25:22 INFO  Started: Metals version 1.1.0 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1ocaml' for client Visual Studio Code 1.84.0.
+2023.11.03 13:25:23 WARN  Build server is not auto-connectable.
+2023.11.03 13:25:23 WARN  no build tool detected in workspace 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1ocaml'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.11.03 13:25:25 INFO  Shutting down server
+2023.11.03 13:25:25 INFO  shutting down Metals
+2023.11.03 13:25:25 INFO  Exiting server

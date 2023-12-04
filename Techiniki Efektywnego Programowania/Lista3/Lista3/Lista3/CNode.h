@@ -1,7 +1,5 @@
 #pragma once
-#include"CNode.h"
 #include<iostream>
-#include<vector>
 #include<sstream>
 
 
@@ -19,18 +17,22 @@ private:
 	CNode** children;
 	std::string value;
 	int childrenCount;
+	int size;
 	NodeType whatAmI;
+
+	void deAlloc();
+	void pushChildrenToBuff(std::stringstream& stringBuffer) const;
+
 public:
 	CNode();
 	CNode(const std::string& value);
 	CNode(const std::string& value,const NodeType& whatAmI);
 	CNode(const CNode& node);
 	~CNode();
-	CNode* getChild(const int index) const;
+	CNode* getChild(const int index);
 	std::string getValue() const;
 
-	CNode* getNodeBefore() const;
-	void pushChildrenToBuff(std::stringstream& stringBuffer) const;
+	CNode* getNodeBeforeMaxR();
 
 	NodeType getWhatAmI()const ;
 	void allocChildren(const int count);
@@ -41,7 +43,7 @@ public:
 	int getChildrenCount() const;
 	std::string toString() const;
 
-	void deAlloc();
+
 	void setElements(const CNode& node);
 	CNode& operator=(const CNode& node);
 	

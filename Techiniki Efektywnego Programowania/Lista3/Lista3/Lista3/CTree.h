@@ -18,21 +18,23 @@ private:
 	std::unordered_set<std::string> unUsedElements;
 	static const std::unordered_map<std::string, int> funMap;
 
+	bool ifTooManyElements;
 	bool ifConstUsed;
-	bool checkRestOfExpresion(std::string& expression);
 
-	void removeUnnesesary(std::string& expression, bool ifAdd);
-	void notRemove(std::string& expression,const std::regex& pattern, bool ifAdd);
+	void checkRestOfExpresion(std::string& expression);
+	void removeUnnesesary(std::string& phrase, bool ifAdd);
+	void notRemove(std::string& phrase,const std::regex& pattern, bool ifAdd);
 
 	NodeType whatNodeIs(const std::string& value) const;
+
 	int indexOfVar(const std::string& variable) const;
 	
-	double comp(const CNode* current);
-	CTree joinHelper(const CTree& tree) const;
+	double comp(CNode* current) const;
 
 	CNode* addNextNode(std::string& expression);
 
 	void setElements(const CTree& current);
+	void deAllocTree();
 	
 public:
 	CTree();
@@ -44,25 +46,26 @@ public:
 
 	double comp(std::string variables);
 
-	CTree join(const CTree& tree) const;
-	CTree join(std::string expression) const;
-
 	std::vector<std::string> getVars() const;
 	std::string toString() const;
 
 
 	void resetVarsValues();
 	void resetTree();
-	void resetUnUsedElements();
+	void resetErrorVars();
+
 	std::string getUnUsedElements() const;
-	std::unordered_set<std::string> getUnUsedElements2() const;
 	std::string getVarsValueString();
+
 	bool ifTreeExists() const;
-	bool checkIfConstUsed() const;
+	bool ifConstUsedInExpression() const;
+	bool ifTooManyElementsInExpression() const;
+	bool ifWrongExpression() const;
+
 	int getUnUsedElementsSize() const;
 
 
 	CTree& operator=(const CTree& tree);
-	CTree operator+(const CTree& tree);
+	CTree operator+(const CTree& tree) const;
 
 };

@@ -1,0 +1,280 @@
+2023.10.12 15:00:22 INFO  Started: Metals version 1.0.1 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3' for client Visual Studio Code 1.82.0.
+paü 12, 2023 3:00:23 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+paü 12, 2023 3:00:23 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+paü 12, 2023 3:00:23 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+paü 12, 2023 3:00:23 PM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\.metals\metals (H2 2.1)
+paü 12, 2023 3:00:23 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory allAppliedMigrations
+INFO: Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+paü 12, 2023 3:00:23 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.027s)
+paü 12, 2023 3:00:23 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory create
+INFO: Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+paü 12, 2023 3:00:23 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": << Empty Schema >>
+paü 12, 2023 3:00:23 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "1 - Create tables"
+paü 12, 2023 3:00:23 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "2 - Server discovery"
+paü 12, 2023 3:00:23 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "3 - Jar symbols"
+paü 12, 2023 3:00:23 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "4 - Fingerprints"
+paü 12, 2023 3:00:23 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.024s)
+2023.10.12 15:00:23 INFO  time: initialize in 0.61s
+2023.10.12 15:00:25 WARN  Build server is not auto-connectable.
+2023.10.12 15:00:25 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\src\main\scala\Main.scala
+2023.10.12 15:00:30 INFO  no build target found for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\src\main\scala\Main.scala. Using presentation compiler with project's scala-library version: 3.3.0
+paü 12, 2023 3:00:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+paü 12, 2023 3:00:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3
+2023.10.12 15:00:32 INFO  time: code lens generation in 1.3s
+2023.10.12 15:00:32 INFO  time: code lens generation in 1.36s
+2023.10.12 15:01:14 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\src\main\scala\Main.scala
+paü 12, 2023 3:14:04 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2023.10.12 15:33:34 INFO  Shutting down server
+2023.10.12 15:33:34 INFO  shutting down Metals
+2023.10.12 15:33:34 INFO  Exiting server
+2023.10.12 17:02:59 INFO  Started: Metals version 1.0.1 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3' for client Visual Studio Code 1.82.0.
+paü 12, 2023 5:02:59 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+paü 12, 2023 5:02:59 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+paü 12, 2023 5:02:59 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+paü 12, 2023 5:03:00 PM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\.metals\metals (H2 2.1)
+paü 12, 2023 5:03:00 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.047s)
+paü 12, 2023 5:03:00 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+paü 12, 2023 5:03:00 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.10.12 17:03:00 INFO  time: initialize in 0.99s
+2023.10.12 17:03:04 WARN  Build server is not auto-connectable.
+2023.10.12 17:03:04 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\src\main\scala\Main.scala
+2023.10.12 17:03:09 INFO  no build target found for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\src\main\scala\Main.scala. Using presentation compiler with project's scala-library version: 3.3.0
+2023.10.12 17:03:10 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\src\main\scala\Main.scala
+paü 12, 2023 5:03:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\src\main\scala\Main.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\src\main\scala\Main.scala
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:743)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:731)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2112)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\src\main\scala\Main.scala
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:470)
+	at scala.meta.internal.metals.MetalsLspService.debugDiscovery(MetalsLspService.scala:1803)
+	at scala.meta.internal.metals.WorkspaceLspService.executeCommand(WorkspaceLspService.scala:869)
+	at scala.meta.metals.lsp.DelegatingScalaService.executeCommand(DelegatingScalaService.scala:169)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2023.10.12 17:03:10 INFO  running 'C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\chudz\AppData\Local\Temp\metals679214294516821892\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2023.10.12 17:03:12 INFO  time: code lens generation in 2.6s
+2023.10.12 17:03:13 INFO  [info] welcome to sbt 1.9.6 (Microsoft Java 11.0.16.1)
+2023.10.12 17:03:16 INFO  [info] loading settings for project lista1scala3-build-build from metals.sbt ...
+2023.10.12 17:03:16 INFO  [info] loading project definition from C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\project\project
+2023.10.12 17:03:21 INFO  [info] loading settings for project lista1scala3-build from metals.sbt ...
+2023.10.12 17:03:21 INFO  [info] loading project definition from C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\project
+2023.10.12 17:03:24 INFO  [success] Generated .bloop\lista1scala3-build.json
+2023.10.12 17:03:24 INFO  [success] Total time: 3 s, completed 12 pa≈∫ 2023, 17:03:24
+2023.10.12 17:03:26 INFO  [info] loading settings for project lista1scala3 from build.sbt ...
+2023.10.12 17:03:26 INFO  [info] set current project to hello-world (in build file:/C:/Users/chudz/Desktop/Dawid/Paradygmaty%20Programowania/New/lista1scala3/)
+2023.10.12 17:03:28 INFO  [success] Generated .bloop\lista1scala3.json
+2023.10.12 17:03:28 INFO  [success] Generated .bloop\lista1scala3-test.json
+2023.10.12 17:03:28 INFO  [success] Total time: 2 s, completed 12 pa≈∫ 2023, 17:03:28
+2023.10.12 17:03:28 INFO  time: ran 'sbt bloopInstall' in 17s
+2023.10.12 17:03:28 INFO  Attempting to connect to the build server...
+2023.10.12 17:03:28 INFO  Setting up current java home C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot in C:\Users\chudz\.bloop\bloop.json
+2023.10.12 17:03:37 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\.metals\bsp.trace.json or C:\Users\chudz\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.10.12 17:03:39 INFO  Attempting to connect to the build server...
+2023.10.12 17:03:39 INFO  Bloop uses C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot defined at C:\Users\chudz\.bloop\bloop.json
+2023.10.12 17:03:39 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\project\.metals\bsp.trace.json or C:\Users\chudz\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.10.12 17:03:39 INFO  time: Connected to build server in 11s
+2023.10.12 17:03:39 INFO  Connected to Build server: Bloop v1.5.8
+2023.10.12 17:03:40 INFO  time: Imported build in 0.25s
+2023.10.12 17:03:46 INFO  time: indexed workspace in 5.84s
+2023.10.12 17:03:46 INFO  compiling lista1scala3 (1 scala source)
+2023.10.12 17:03:51 INFO  Shutting down server
+2023.10.12 17:03:51 INFO  shutting down Metals
+2023.10.12 17:03:51 INFO  Shut down connection with build server.
+2023.10.12 17:03:51 INFO  Shut down connection with build server.
+paü 12, 2023 5:03:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint notify
+INFO: Failed to send notification message.
+org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.nio.channels.ClosedChannelException
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:44)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.notify(RemoteEndpoint.java:126)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.sendCancelNotification(RemoteEndpoint.java:180)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint$1.cancel(RemoteEndpoint.java:150)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$register$2(BuildServerConnection.scala:349)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.scala:17)
+	at scala.util.Try$.apply(Try.scala:210)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$register$1(BuildServerConnection.scala:349)
+	at scala.meta.internal.metals.Cancelable$$anon$1.cancel(Cancelable.scala:18)
+	at scala.meta.internal.metals.Cancelable$.$anonfun$cancelAll$1(Cancelable.scala:29)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at scala.meta.internal.metals.Cancelable$.cancelAll(Cancelable.scala:28)
+	at scala.meta.internal.metals.MutableCancelable.cancel(MutableCancelable.scala:25)
+	at scala.meta.internal.metals.BuildServerConnection.cancel(BuildServerConnection.scala:286)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1(BuildServerConnection.scala:122)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1$adapted(BuildServerConnection.scala:114)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpenAndConnected(SocketChannelImpl.java:180)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:452)
+	at java.base/sun.nio.ch.SinkChannelImpl.write(SinkChannelImpl.java:114)
+	at java.base/java.nio.channels.Channels.writeFullyImpl(Channels.java:74)
+	at java.base/java.nio.channels.Channels.writeFully(Channels.java:94)
+	at java.base/java.nio.channels.Channels$1.write(Channels.java:172)
+	at java.base/java.io.OutputStream.write(OutputStream.java:122)
+	at java.base/java.nio.channels.Channels$1.write(Channels.java:152)
+	at scala.meta.internal.metals.ClosableOutputStream.write(ClosableOutputStream.scala:26)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:137)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:108)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:67)
+	... 20 more
+
+2023.10.12 17:03:51 INFO  Cancelling compilation on Bloop server
+2023.10.12 17:03:51 INFO  Exiting server
+2023.10.12 17:04:33 INFO  Started: Metals version 1.0.1 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3' for client Visual Studio Code 1.83.1.
+paü 12, 2023 5:04:33 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+paü 12, 2023 5:04:33 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+paü 12, 2023 5:04:33 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+paü 12, 2023 5:04:34 PM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\.metals\metals (H2 2.1)
+paü 12, 2023 5:04:34 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.025s)
+paü 12, 2023 5:04:34 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+paü 12, 2023 5:04:34 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.10.12 17:04:34 INFO  time: initialize in 0.66s
+2023.10.12 17:04:36 INFO  Attempting to connect to the build server...
+2023.10.12 17:04:36 INFO  Bloop uses C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot defined at C:\Users\chudz\.bloop\bloop.json
+2023.10.12 17:04:36 INFO  skipping build import with status 'Installed'
+2023.10.12 17:04:36 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\.metals\bsp.trace.json or C:\Users\chudz\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.10.12 17:04:36 INFO  Attempting to connect to the build server...
+2023.10.12 17:04:36 INFO  Bloop uses C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot defined at C:\Users\chudz\.bloop\bloop.json
+2023.10.12 17:04:36 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\project\.metals\bsp.trace.json or C:\Users\chudz\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.10.12 17:04:36 INFO  time: Connected to build server in 0.42s
+2023.10.12 17:04:36 INFO  Connected to Build server: Bloop v1.5.8
+2023.10.12 17:04:39 INFO  no build target found for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\src\main\scala\Main.scala. Using presentation compiler with project's scala-library version: 3.3.0
+2023.10.12 17:04:39 INFO  time: Imported build in 0.26s
+2023.10.12 17:04:40 INFO  no build target found for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\src\main\scala\Main.scala. Using presentation compiler with project's scala-library version: 3.3.0
+2023.10.12 17:04:42 INFO  time: code lens generation in 3.42s
+2023.10.12 17:04:45 INFO  time: indexed workspace in 5.59s
+2023.10.12 17:04:45 INFO  compiling lista1scala3 (1 scala source)
+2023.10.12 17:04:45 INFO  time: compiled lista1scala3 in 0.29s
+2023.10.12 17:04:45 INFO  compiling lista1scala3 (1 scala source)
+2023.10.12 17:04:46 INFO  time: compiled lista1scala3 in 1.23s
+2023.10.12 17:05:09 INFO  compiling lista1scala3 (2 scala sources)
+2023.10.12 17:05:09 INFO  time: compiled lista1scala3 in 0.11s
+2023.10.12 17:05:09 INFO  compiling lista1scala3 (2 scala sources)
+2023.10.12 17:05:09 INFO  time: compiled lista1scala3 in 85ms
+2023.10.12 17:05:26 WARN  Using indexes to guess the definition of Unit
+Exception in thread "pool-6-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$onCompilerJobQueue$1(CompilerAccess.scala:229)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023.10.12 17:05:35 INFO  compiling lista1scala3 (2 scala sources)
+2023.10.12 17:05:35 INFO  time: compiled lista1scala3 in 78ms
+2023.10.12 17:05:59 INFO  compiling lista1scala3 (2 scala sources)
+2023.10.12 17:05:59 INFO  time: compiled lista1scala3 in 91ms
+2023.10.12 17:07:16 INFO  
+2023.10.12 17:07:16 INFO  Template applied in C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\.\hello-world
+2023.10.12 17:07:16 INFO  
+2023.10.12 17:07:16 INFO  time: ran 'giter8.Giter8' in 2.84s
+2023.10.12 17:14:32 INFO  Shutting down server
+2023.10.12 17:14:32 INFO  shutting down Metals
+2023.10.12 17:14:32 INFO  Shut down connection with build server.
+2023.10.12 17:14:32 INFO  Shut down connection with build server.
+2023.10.12 17:14:32 INFO  Exiting server
+2023.10.13 23:09:21 INFO  Started: Metals version 1.0.1 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3' for client Visual Studio Code 1.83.1.
+paü 13, 2023 11:09:21 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+paü 13, 2023 11:09:21 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+paü 13, 2023 11:09:21 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+paü 13, 2023 11:09:22 PM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\.metals\metals (H2 2.1)
+paü 13, 2023 11:09:22 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.033s)
+paü 13, 2023 11:09:22 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+paü 13, 2023 11:09:22 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.10.13 23:09:22 INFO  time: initialize in 0.77s
+2023.10.13 23:09:23 INFO  Attempting to connect to the build server...
+2023.10.13 23:09:23 INFO  Bloop uses C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot defined at C:\Users\chudz\.bloop\bloop.json
+2023.10.13 23:09:23 INFO  skipping build import with status 'Installed'
+2023.10.18 22:01:40 INFO  Started: Metals version 1.1.0 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3' for client Visual Studio Code 1.83.1.
+2023.10.18 22:01:44 INFO  Attempting to connect to the build server...
+2023.10.18 22:01:45 INFO  skipping build import with status 'Installed'
+2023.10.18 22:01:44 INFO  Bloop uses C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot defined at C:\Users\chudz\.bloop\bloop.json
+paü 18, 2023 10:01:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2023.10.21 14:51:06 INFO  Started: Metals version 1.1.0 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3' for client Visual Studio Code 1.83.1.
+paü 21, 2023 2:51:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2023.10.21 14:51:11 INFO  Attempting to connect to the build server...
+paü 21, 2023 2:51:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7
+2023.10.21 14:51:11 INFO  skipping build import with status 'Installed'
+2023.10.21 14:51:11 INFO  Bloop uses C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot defined at C:\Users\chudz\.bloop\bloop.json
+paü 21, 2023 2:51:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 13
+2023.10.21 14:51:15 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\.metals\bsp.trace.json or C:\Users\chudz\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.10.21 14:51:17 INFO  no build target found for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\src\main\scala\test.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2023.10.21 14:51:19 INFO  Attempting to connect to the build server...
+2023.10.21 14:51:19 INFO  Bloop uses C:\Program Files\Microsoft\jdk-11.0.16.101-hotspot defined at C:\Users\chudz\.bloop\bloop.json
+2023.10.21 14:51:19 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\lista1scala3\project\.metals\bsp.trace.json or C:\Users\chudz\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.10.21 14:51:20 INFO  time: Connected to build server in 8.92s
+2023.10.21 14:51:20 INFO  Connected to Build server: Bloop v1.5.11
+2023.10.21 14:51:20 INFO  time: Imported build in 0.76s
+2023.10.21 14:51:24 INFO  time: indexed workspace in 3.93s
+2023.10.21 14:51:25 INFO  compiling lista1scala3 (2 scala sources)
+2023.10.21 14:51:42 INFO  time: compiled lista1scala3 in 16s
+2023.10.21 14:51:42 INFO  compiling lista1scala3 (2 scala sources)
+2023.10.21 14:51:42 INFO  time: compiled lista1scala3 in 0.29s
+2023.10.21 14:51:42 INFO  compiling lista1scala3 (2 scala sources)
+2023.10.21 14:51:42 INFO  time: compiled lista1scala3 in 0.2s
+2023.10.21 14:58:53 INFO  Shutting down server
+2023.10.21 14:58:53 INFO  shutting down Metals
+2023.10.21 14:58:53 INFO  Shut down connection with build server.
+2023.10.21 14:58:53 INFO  Shut down connection with build server.
+2023.10.21 14:58:53 INFO  Exiting server

@@ -1,0 +1,6 @@
+2023.10.21 14:50:53 INFO  Started: Metals version 1.1.0 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\Testing' for client Visual Studio Code 1.83.1.
+2023.10.21 14:50:54 WARN  Build server is not auto-connectable.
+2023.10.21 14:50:54 WARN  no build tool detected in workspace 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\Testing'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.10.21 14:51:00 INFO  Shutting down server
+2023.10.21 14:51:00 INFO  shutting down Metals
+2023.10.21 14:51:00 INFO  Exiting server

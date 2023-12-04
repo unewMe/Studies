@@ -1,0 +1,42 @@
+2023.10.12 14:59:10 INFO  Started: Metals version 1.0.1 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New' for client Visual Studio Code 1.82.0.
+paü 12, 2023 2:59:10 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+paü 12, 2023 2:59:10 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+paü 12, 2023 2:59:10 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+paü 12, 2023 2:59:11 PM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\.metals\metals (H2 2.1)
+paü 12, 2023 2:59:11 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory allAppliedMigrations
+INFO: Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+paü 12, 2023 2:59:11 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.016s)
+paü 12, 2023 2:59:11 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory create
+INFO: Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+paü 12, 2023 2:59:11 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": << Empty Schema >>
+paü 12, 2023 2:59:11 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "1 - Create tables"
+paü 12, 2023 2:59:11 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "2 - Server discovery"
+paü 12, 2023 2:59:11 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "3 - Jar symbols"
+paü 12, 2023 2:59:11 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "4 - Fingerprints"
+paü 12, 2023 2:59:11 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.024s)
+2023.10.12 14:59:11 INFO  time: initialize in 0.67s
+paü 12, 2023 2:59:13 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2023.10.12 14:59:13 WARN  Build server is not auto-connectable.
+2023.10.12 14:59:13 WARN  no build tool detected in workspace 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.10.12 14:59:40 WARN  no build tool detected in workspace 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.10.12 14:59:41 WARN  no build tool detected in workspace 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.10.12 14:59:40 WARN  no build tool detected in workspace 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.10.12 15:00:13 INFO  
+2023.10.12 15:00:13 INFO  Template applied in C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\New\.\lista1scala3
+2023.10.12 15:00:13 INFO  
+2023.10.12 15:00:13 INFO  time: ran 'giter8.Giter8' in 5.59s
+2023.10.12 15:00:17 INFO  Shutting down server
+2023.10.12 15:00:17 INFO  shutting down Metals
+2023.10.12 15:00:17 INFO  Exiting server

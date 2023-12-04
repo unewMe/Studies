@@ -6,28 +6,22 @@
 int main()
 {
 
-//	CTree tree;
-//	std::string expression;
-//	std::getline(std::cin, expression);
-//	std::cout<<tree.enter(expression)<<std::endl;
-//	CTree tree2;
-//	tree2 = tree.join("+ 2 c");
-//	std::cout<<tree2.toString()<<std::endl;
-//	std::cout << tree.toString() << std::endl;
-//	std::cout << std::endl;
-//	//std::cout<<tree.comp("1") << std::endl;
-////	std::cout << tree.comp("2 4") << std::endl;
-//	CNode node("2", -1);
-//	node.pushChld(new CNode("4", -1));
-//	node.incrementChildrenCount();
-//	std::cout<<CNode(node).getChild(0)->getValue()<<std::endl;
-//	
-//	std::vector<std::string> args = tree2.getArgs();
-//	for (int i = 0; i < args.size(); i++)
-//	{
-//		std::cout << args[i] << std::endl;
-//	}
-//	return 0;
+	//CTree tree;
+	//std::string expression;
+	//std::getline(std::cin, expression);
+	//std::cout<<tree.enter(expression)<<std::endl;
+	//CTree tree2;
+	//std::getline(std::cin, expression);
+	//std::cout << tree2.enter(expression) << std::endl;
+	//CTree tree3;
+	//tree3 = tree + tree2;
+	//tree3 = tree3 + tree2;
+	//std::cout<<tree3.toString()<<std::endl;
+	//std::cout << tree2.toString() << std::endl;
+	//std::cout << tree.toString() << std::endl;
+	//return 0;
+	//	std::cout << 1.0/0.0 << std::endl;
 	CUI cui;
 	cui.start();
+	return 0;
 }

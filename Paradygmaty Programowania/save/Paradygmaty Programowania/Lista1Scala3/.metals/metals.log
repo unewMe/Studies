@@ -1,0 +1,91 @@
+2023.10.21 14:59:02 INFO  Started: Metals version 1.1.0 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3' for client Visual Studio Code 1.83.1.
+2023.10.21 14:59:03 WARN  Build server is not auto-connectable.
+2023.10.21 14:59:03 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3\src\main\scala\Zadania.scala
+2023.10.21 14:59:08 INFO  no build target found for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3\src\main\scala\Zadania.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2023.10.21 14:59:11 INFO  time: code lens generation in 7.37s
+paü 21, 2023 2:59:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 28
+2023.10.21 14:59:38 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3\src\main\scala\Zadania.scala
+2023.10.21 15:13:29 INFO  Shutting down server
+2023.10.21 15:13:29 INFO  shutting down Metals
+2023.10.21 15:13:29 INFO  Exiting server
+2023.10.21 15:13:29 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+
+2023.10.23 12:07:39 INFO  Started: Metals version 1.1.0 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3' for client Visual Studio Code 1.83.1.
+2023.10.23 12:07:40 WARN  Build server is not auto-connectable.
+2023.10.23 12:07:40 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3\src\main\scala\Zadania.scala
+2023.10.23 12:07:44 INFO  no build target found for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3\src\main\scala\Zadania.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2023.10.23 12:07:45 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3\src\main\scala\Zadanie2.sc
+2023.10.23 12:07:49 INFO  time: code lens generation in 8.06s
+2023.10.23 12:07:49 INFO  time: code lens generation in 4.3s
+2023.10.23 12:07:54 INFO  time: code lens generation in 2.24s
+2023.10.23 12:07:54 INFO  time: code lens generation in 1.55s
+2023.10.23 12:08:09 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3\src\main\scala\Zadanie2.sc
+2023.10.23 12:08:33 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3\src\main\scala\Zadanie2.sc
+2023.10.23 12:08:43 INFO  Shutting down server
+2023.10.23 12:08:43 INFO  shutting down Metals
+2023.10.23 12:08:43 INFO  Exiting server
+2023.10.23 12:10:50 INFO  Started: Metals version 1.1.0 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3' for client Visual Studio Code 1.83.1.
+2023.10.23 12:10:51 WARN  Build server is not auto-connectable.
+2023.10.23 12:10:51 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3\src\main\scala\Zadania.scala
+2023.10.23 12:10:56 INFO  no build target found for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3\src\main\scala\Zadanie1.sc. Using presentation compiler with project's scala-library version: 3.3.1
+2023.10.23 12:10:59 INFO  time: code lens generation in 7.26s
+2023.10.23 12:11:33 INFO  time: code lens generation in 1.17s
+2023.10.23 12:11:36 ERROR Failed to tokenize input for semantic tokens for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3\src\main\scala\Zadania.scala
+scala.meta.tokenizers.TokenizeException: <input>:10: error: unclosed string literal
+        print("\")
+              ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.getStringLit(LegacyScanner.scala:553)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchDoubleQuote$1(LegacyScanner.scala:372)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:376)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:539)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+
+paü 23, 2023 12:11:38 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3\.metals\.reports\metals-full\2023-10-23\r_compiler-error_12-11-38-397.md
+2023.10.23 12:11:38 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3\src\main\scala\Zadania.scala
+2023.10.23 12:11:38 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3\src\main\scala\Zadania.scala
+paü 23, 2023 12:11:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 75
+2023.10.23 12:11:59 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3\src\main\scala\Zadania.scala
+2023.10.23 12:12:14 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3\src\main\scala\Zadania.scala
+2023.10.23 12:12:30 INFO  Shutting down server
+2023.10.23 12:12:30 INFO  shutting down Metals
+2023.10.23 12:12:30 INFO  Exiting server
+2023.10.23 13:15:53 INFO  Started: Metals version 1.1.0 in folders 'C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3' for client Visual Studio Code 1.83.1.
+2023.10.23 13:15:55 WARN  Build server is not auto-connectable.
+2023.10.23 13:15:55 WARN  no build target for: C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3\src\main\scala\Zadania.scala
+2023.10.23 13:16:00 INFO  no build target found for C:\Users\chudz\Desktop\Dawid\Paradygmaty Programowania\Lista1Scala3\src\main\scala\Zadania.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2023.10.23 13:16:01 INFO  Shutting down server
+2023.10.23 13:16:01 INFO  shutting down Metals
