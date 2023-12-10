@@ -1,38 +1,51 @@
 #pragma once
-#include"CNode.h"
 #include<iostream>
-#include<vector>
 #include<sstream>
 
-template<typename T>
+
+enum class NodeType
+{
+	OPERATOR,
+	VALUE,
+	VARIABLE,
+	UNKNOWN
+};
+
 class CNode
 {
 private:
-	std::vector<CNode*> children;
-	T value;
+	CNode** children;
+	std::string value;
 	int childrenCount;
-	int whatAmI;
+	int size;
+	NodeType whatAmI;
+
+	void deAlloc();
+	void pushChildrenToBuff(std::stringstream& stringBuffer) const;
+
 public:
 	CNode();
-	CNode(const T& value,const int whatAmI);
-	CNode(const CNode<T>& node);
+	CNode(const std::string& value);
+	CNode(const std::string& value,const NodeType& whatAmI);
+	CNode(const CNode& node);
 	~CNode();
-	CNode* getChild(const int index) const;
-	T getValue() const;
+	CNode* getChild(const int index);
+	std::string getValue() const;
 
-	CNode* getNodeBefore() const;
-	void printChild(std::stringstream& stringBuffer);
+	CNode* getNodeBeforeMaxR();
 
-	int getWhatAmI()const ;
-	void pushChld(CNode<T>* child);
-	void setChild(const int index, const CNode<T>& child);
-	void setValue(const T& value);
+	NodeType getWhatAmI()const ;
+	void allocChildren(const int count);
+	void pushChld(CNode* child);
+	void setCopyChild(const int index, const CNode& child);
+	void setValue(const std::string& value);
 	void setWhatAmI(const int whatAmI);
-	void incrementChildrenCount();
 	int getChildrenCount() const;
 	std::string toString() const;
 
-	CNode& operator=(const CNode<T>& node);
+
+	void setElements(const CNode& node);
+	CNode& operator=(const CNode& node);
 	
 
 };

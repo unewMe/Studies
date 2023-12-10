@@ -9,12 +9,8 @@ bool ifLetter(const std::string& phrase);
 std::string takeNext(std::string& expression);
 
 
-CTree::CTree()
-{
-	root = nullptr;
-	ifConstUsed = false;
-	ifTooManyElements = false;
-}
+CTree::CTree() : root(nullptr), ifConstUsed(false), ifTooManyElements(false){} 
+
 
 CTree::CTree(const CTree& tree)
 {

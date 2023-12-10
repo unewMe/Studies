@@ -1,14 +1,11 @@
 #include"CNode.h"
 #include<string>
 
-CNode::CNode(const std::string& value, const NodeType& whatAmI)
-{
-	this->value = value;
-	this->whatAmI = whatAmI;
-	childrenCount = 0;
-	size = 0;
-	children = nullptr;
-}
+
+CNode::CNode() : value(""), whatAmI(NodeType::UNKNOWN), childrenCount(0), size(0), children(nullptr) {}
+
+CNode::CNode(const std::string& value, const NodeType& whatAmI) : value(value), whatAmI(whatAmI), childrenCount(0), size(0), children(nullptr) {}
+
 
 CNode::CNode(const CNode& node)
 {
@@ -61,7 +58,7 @@ void CNode::setElements(const CNode& node)
 	whatAmI = node.whatAmI;
 	childrenCount = node.childrenCount;
 	size = node.size;
-	allocChildren(node.size);//node.childrenCount
+	allocChildren(node.size);
 	for (int i = 0; i < node.childrenCount; i++)
 	{
 		children[i] = (new CNode((*node.children[i])));
@@ -125,20 +122,12 @@ void CNode::pushChildrenToBuff(std::stringstream& stringBuffer) const
 	while (counter < childrenCount)
 	{
 		(*children[counter++]).pushChildrenToBuff(stringBuffer);
-		//counter++;
 	}
 }
 
 CNode* CNode::getNodeBeforeMaxR()
 {
-	//if (this->getChild(this->getChildrenCount() - 1)->getChildrenCount() <= 0)
-	//{
-	//	return const_cast<CNode*>(this);
-	//}
-	//else
-	//{
-	//	return this->getChild(this->getChildrenCount() - 1)->getNodeBefore();
-	//}
+
 	if (childrenCount <= 0)
 	{
 		return nullptr;

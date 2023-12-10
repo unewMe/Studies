@@ -24,7 +24,7 @@
     <ProjectGuid>{49328900-7a41-4001-bc13-ad71af0db184}</ProjectGuid>
     <RootNamespace>Lista3</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Lista4_1</ProjectName>
+    <ProjectName>Lista4</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -129,16 +129,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CNode.cpp" />
+    <ClInclude Include="CTree.tpp">
+      <FileType>Document</FileType>
+    </ClInclude>
     <ClCompile Include="CTree.cpp" />
-    <ClCompile Include="CUI.cpp" />
-    <ClCompile Include="CUIN.cpp" />
+    <ClInclude Include="CUI.tpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+    </ClInclude>
     <ClCompile Include="main.cpp" />
+    <ClInclude Include="stringOperators.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CNode.h" />
     <ClInclude Include="CTree.h" />
-    <ClInclude Include="CUI.h" />
-    <ClInclude Include="CUIN.h" />
+    <ClInclude Include="CUI.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

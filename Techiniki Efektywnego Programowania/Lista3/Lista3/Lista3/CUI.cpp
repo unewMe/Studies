@@ -91,9 +91,8 @@ void CUI::whatNoEntered(CTree& tree)
 
 void CUI::comp()
 {
-	if (!tree.ifTreeExists())
+	if (ifTreeNotExsist(tree))
 	{
-		std::cout << "Expression do not exsist" << std::endl;
 		return;
 	}
 
@@ -132,9 +131,8 @@ void CUI::comp()
 
 void CUI::join()
 {
-	if (!tree.ifTreeExists())
+	if (ifTreeNotExsist(tree))
 	{
-		std::cout << "Expression do not exsist" << std::endl;
 		return;
 	}
 
@@ -152,9 +150,8 @@ void CUI::join()
 
 void CUI::print() const
 {
-	if (!tree.ifTreeExists())
+	if (ifTreeNotExsist(tree))
 	{
-		std::cout << "Expression do not exsist" << std::endl;
 		return;
 	}
 
@@ -163,9 +160,8 @@ void CUI::print() const
 
 void CUI::vars() const
 {
-	if (!tree.ifTreeExists())
+	if (ifTreeNotExsist(tree))
 	{
-		std::cout << "Expression do not exsist" << std::endl;
 		return;
 	}
 

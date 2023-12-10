@@ -1,122 +1,150 @@
 #include"CNode.h"
 #include<string>
 
-template<typename T>
-CNode<T>::CNode()
+
+CNode::CNode() : value(""), whatAmI(NodeType::UNKNOWN), childrenCount(0), size(0), children(nullptr) {}
+
+CNode::CNode(const std::string& value, const NodeType& whatAmI) : value(value), whatAmI(whatAmI), childrenCount(0), size(0), children(nullptr) {}
+
+
+CNode::CNode(const CNode& node)
 {
-	childrenCount = 0;
-}
-template<typename T>
-CNode<T>::CNode(const T& value, const int whatAmI)
-{
-	this->value = value;
-	this->whatAmI = whatAmI;
-	childrenCount = 0;
+	setElements(node);
 }
 
-template<typename T>
-CNode<T>::~CNode()
+CNode::~CNode()
 {
-	for (int i = 0; i < children.size(); i++)
+	deAlloc();
+}
+
+void CNode::deAlloc()
+{
+	if (children != nullptr)
 	{
-		delete children[i];
+		for (int i = 0; i < childrenCount; i++)
+		{
+			if (children[i] != nullptr)
+			{
+				delete children[i];
+			}
+			
+		}
+		delete children;
 	}
 }
 
-template<typename T>
-CNode<T>::CNode(const CNode<T>& node)
+void CNode::allocChildren(const int size)
 {
-
-	for (int i = 0; i < node.children.size(); i++)
+	deAlloc();
+	children = new CNode * [size];
+	this->size = size;
+}
+void CNode::pushChld(CNode* child)
+{
+	if (childrenCount < size)
 	{
-		children.push_back(new CNode((*node.children[i])));
+		children[childrenCount++] = child;
 	}
-	childrenCount = node.childrenCount;
-	value = node.value;
-	whatAmI = node.whatAmI;
-}
-
-template<typename T>
-void CNode<T>::incrementChildrenCount()
-{
-	childrenCount++;
-}
-
-template<typename T>
-void CNode<T>::pushChld(CNode* child)
-{
-	children.push_back(child);
+	//else
+	//{
+	//	throw std::out_of_range("Index out of range");
+	//}
+	
 }
  
-template<typename T>
-CNode<T>* CNode<T>::getChild(int index) const	
+void CNode::setElements(const CNode& node)
 {
-	return children[index];
+	value = node.value;
+	whatAmI = node.whatAmI;
+	childrenCount = node.childrenCount;
+	size = node.size;
+	allocChildren(node.size);
+	for (int i = 0; i < node.childrenCount; i++)
+	{
+		children[i] = (new CNode((*node.children[i])));
+	}
 }
-
-template<typename T>
-int CNode<T>::getChildrenCount() const
+CNode* CNode::getChild(int index)	
+{
+	if (0 <= index && index < childrenCount)
+	{
+		return children[index];
+	}
+	return nullptr;
+}
+int CNode::getChildrenCount() const
 {
 	return childrenCount;
 }
 
-template<typename T>
-void CNode<T>::setChild(const int index,const CNode<T>& child)
+void CNode::setCopyChild(const int index,const CNode& child)
 {
-	children[index] = new CNode(child);
+	if (0 <= index && index < childrenCount)
+	{
+		if (children != nullptr && children[index] != nullptr)
+		{
+			delete children[index];
+		}
+		children[index] = new CNode(child);
+	}
+	//else
+	//{
+	//	throw std::out_of_range("Index out of range");
+	//}
 }
 
-template<typename T>
-CNode<T>& CNode<T>::operator=(const CNode<T>& node)
+
+CNode& CNode::operator=(const CNode& node)
 {
 	if (this == &node)
 	{
 		return *this;
 	}
-	for (int i = 0; i < node.children.size(); i++)
-	{
-		children.push_back(new CNode((*node.children[i])));
-	}
-	childrenCount = node.childrenCount;
-	value = node.value;
-	whatAmI = node.whatAmI;
+	deAlloc();
+	setElements(node);
 	return *this;
 
 }
 
-template<typename T>
-int CNode<T>::getWhatAmI() const
+NodeType CNode::getWhatAmI() const
 {
 	return whatAmI;
 }
-
-template<typename T>
-T CNode<T>::getValue() const
+std::string CNode::getValue() const
 {
 	return value;
 }
 
-template<typename T>
-void CNode<T>::printChild(std::stringstream& stringBuffer)
+void CNode::pushChildrenToBuff(std::stringstream& stringBuffer) const
 {
 	stringBuffer << value << " ";
 	int counter = 0;
 	while (counter < childrenCount)
 	{
-		(*children[counter]).printChild(stringBuffer);
-		counter++;
+		(*children[counter++]).pushChildrenToBuff(stringBuffer);
 	}
 }
 
-template<typename T>
-CNode<T>* CNode<T>::getNodeBefore() const
+CNode* CNode::getNodeBeforeMaxR()
 {
-	if (this->getChild(this->getChildrenCount() - 1)->getChildrenCount() <= 0)
+
+	if (childrenCount <= 0)
 	{
-		return const_cast<CNode*>(this);
+		return nullptr;
+	}
+	else if (children[childrenCount-1]->childrenCount <= 0)
+	{
+		return this;
 	}
 	else
 	{
-		return this->getChild(this->getChildrenCount() - 1)->getNodeBefore();
+		return children[childrenCount - 1]->getNodeBeforeMaxR();
 	}
+}
+
+std::string CNode::toString() const
+{
+	std::stringstream stringBuffer;
+	pushChildrenToBuff(stringBuffer);
+	return stringBuffer.str();
 }
