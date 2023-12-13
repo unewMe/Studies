@@ -22,14 +22,16 @@ const std::regex CTree<std::string>::patternValue("^\".*\"$");
 
 bool ifLetter(const std::string& phrase);
 bool ifLetterAndNumOnly(const std::string& phrase);
+
 template<typename T>
 bool ifInMap(const std::string& value, const std::unordered_map<std::string, T>& map);
+
+template<typename T>
+T div(T& first, T& second);
+
+
 std::string takeNext(std::string& expression);
 
-std::string operator+(std::string& a, std::string& b)
-{
-	return "\"" + a.substr(1, a.size() - 2) + "xd" + b.substr(1, b.size() - 2) + "\"";
-}
 
 
 template<typename T>
@@ -114,8 +116,11 @@ CTree<T> CTree<T>::operator+(const CTree<T>& tree) const
 		for (int i = 0; i < treeVarsSize; i++)
 		{
 			res.varsCountMap[tree.vars[i]]++;
-			res.varsValueMap[tree.vars[i]] = -1;
-			res.vars.push_back(tree.vars[i]);
+			if(!ifInMap<T>(tree.vars[i], res.varsValueMap))
+			{
+				res.varsValueMap[tree.vars[i]] = -1;
+				res.vars.push_back(tree.vars[i]);
+			}
 		}
 
 		return res;
@@ -244,16 +249,11 @@ template<typename T>
 T CTree<T>::comp(CNode* current) const
 {
 	NodeType type = current->getWhatAmI();
+	std::string value = current->getValue();
 
 	if (type == NodeType::OPERATOR)
 	{
-		std::string value = current->getValue();
-		if (value == "+")
-		{
-			T res = comp(current->getChild(0)) + comp(current->getChild(1));
-			return res;// comp(current->getChild(0)) + comp(current->getChild(1));
-		}
-		else if (value == "-")
+		if (value == "-")
 		{
 			return comp(current->getChild(0)) - comp(current->getChild(1));
 		}
@@ -263,12 +263,9 @@ T CTree<T>::comp(CNode* current) const
 		}
 		else if (value == "/")
 		{
+			T first = comp(current->getChild(0));
 			T second = comp(current->getChild(1));
-			//if (second == 0.0)
-			//{
-			//	throw std::invalid_argument("Division by 0");
-			//}
-			return comp(current->getChild(0)) / second;
+			return div<T>(first, second);
 
 		}
 		else
@@ -279,18 +276,22 @@ T CTree<T>::comp(CNode* current) const
 	}
 	else if (type == NodeType::VARIABLE)
 	{
-		return varsValueMap.at(current->getValue());
+		return varsValueMap.at(value);
 	}
 	else
 	{
-		return compValue(current->getValue());
+		return compValue(value);
 	}
 }
 
 template<typename T>
 T CTree<T> ::restOfComp(std::string& value,CNode* current) const
 {
-	if (value == "sin")
+	if (value == "+")
+	{
+		return comp(current->getChild(0)) + comp(current->getChild(1));
+	}
+	else if (value == "sin")
 	{
 		return sin(comp(current->getChild(0)));
 	}
@@ -305,66 +306,66 @@ T CTree<T> ::restOfComp(std::string& value,CNode* current) const
 }
 std::string CTree<std::string>::restOfComp(std::string& value, CNode* current) const
 {
-	throw std::invalid_argument("Operation do not exsist");
+	if (value == "+")
+	{
+		std::string first = comp(current->getChild(0));
+		std::string second = comp(current->getChild(1));
+		return "\"" + first.substr(1, first.size() - 2) + second.substr(1, second.size() - 2) + "\"";
+	}
+	else
+	{
+		throw std::invalid_argument("Operation do not exsist");
+	}
+	
 }
 
-//std::string CTree<std::string>::comp(CNode* current) const
-//{
-//	NodeType type = current->getWhatAmI();
-//
-//	if (type == NodeType::OPERATOR)
-//	{
-//		std::string value = current->getValue();
-//		if (value == "+")
-//		{
-//			return comp(current->getChild(0)) + comp(current->getChild(1));
-//		}
-//		else if (value == "-")
-//		{
-//			return comp(current->getChild(0)) - comp(current->getChild(1));
-//		}
-//		else if (value == "*")
-//		{
-//			return comp(current->getChild(0)) * comp(current->getChild(1));
-//		}
-//		else if (value == "/")
-//		{
-//			return comp(current->getChild(0)) / comp(current->getChild(1));
-//
-//		}
-//		else
-//		{
-//			throw std::invalid_argument("Operation do not exsist");
-//		}
-//
-//	}
-//	else if (type == NodeType::VARIABLE)
-//	{
-//		return varsValueMap.at(current->getValue());
-//	}
-//	else
-//	{
-//		return current->getValue();
-//	}
-//}
+template<typename T>
+T div(T& first, T& second)
+{
+	throw std::invalid_argument("Unknown Type");
+}
+template<>
+int div(int& first, int& second)
+{
+	if (second == 0)
+	{
+		throw std::invalid_argument("Division by 0");
+	}
+	return first / second;
+}
+template<>
+double div(double& first, double& second)
+{
+	if (second == 0.0)
+	{
+		throw std::invalid_argument("Division by 0");
+	}
+	return first / second;
+}
+template<>
+std::string div(std::string& first, std::string& second)
+{
+	return first / second;
+}
+
 
 template<typename T>
-T CTree<T>::compValue(std::string currentValue) const
+T CTree<T>::compValue(std::string& currentValue) const
 {
 	throw std::invalid_argument("Unknown Type");
 }
 
-int CTree<int>::compValue(std::string currentValue) const
+int CTree<int>::compValue(std::string& currentValue) const
 {
 	return std::stoi(currentValue);
 }
 
-double CTree<double>::compValue(std::string currentValue) const
+double CTree<double>::compValue(std::string& currentValue) const
 {
 	return std::stod(currentValue);
 }
 
-std::string CTree<std::string>::compValue(std::string currentValue) const
+std::string CTree<std::string>::compValue(std::string& currentValue) const
 {
 	return currentValue;
 }

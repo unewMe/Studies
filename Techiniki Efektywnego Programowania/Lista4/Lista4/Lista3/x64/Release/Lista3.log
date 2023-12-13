@@ -1,15 +1,25 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: Katalog pośredni (x64\Release\) zawiera pliki udostępnione z innego projektu (Lista3.vcxproj). Może to spowodować niepoprawne zachowanie podczas oczyszczania i ponownej kompilacji.
   main.cpp
-C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CTree.tpp(269,14): warning C4244: "return": konwersja z "double" do "T", możliwa utrata danych
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CTree.tpp(284,13): warning C4244: "return": konwersja z "double" do "T", możliwa utrata danych
           with
           [
               T=int
           ]
-C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CTree.tpp(239,1): message : podczas kompilowania funkcji składowej „T CTree<T>::comp(CNode *) const” klasy klasa szablon
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CTree.tpp(277,1): message : podczas kompilowania funkcji składowej „T CTree<T>::restOfComp(std::string &,CNode *) const” klasy klasa szablon
           with
           [
               T=int
           ]
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CTree.tpp(261,4): message : zobacz pierwsze odwołanie do elementu „CTree<int>::restOfComp” w „CTree<int>::comp”
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CTree.tpp(233,2): message : zobacz pierwsze odwołanie do elementu „CTree<int>::comp” w „CTree<int>::comp”
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CUI.tpp(117,7): message : zobacz pierwsze odwołanie do elementu „CTree<int>::comp” w „CUI<int>::comp”
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CUI.tpp(22,8): message : zobacz pierwsze odwołanie do elementu „CUI<int>::comp” w „CUI<int>::start”
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\main.cpp(10,11): message : zobacz pierwsze odwołanie do elementu „CUI<int>::start” w „main”
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CTree.tpp(181,1): message : podczas kompilowania funkcji składowej „void CTree<int>::checkRestOfExpresion(std::string &)” klasy klasa szablon
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CTree.tpp(127,22): message : zobacz pierwsze odwołanie do elementu „CTree<int>::checkRestOfExpresion” w „CTree<int>::enter”
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CUI.tpp(56,2): message : zobacz pierwsze odwołanie do elementu „CTree<int>::enter” w „CUI<int>::enter”
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CUI.tpp(18,9): message : zobacz pierwsze odwołanie do elementu „CUI<int>::enter” w „CUI<int>::start”
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\main.cpp(10,11): message : zobacz pierwsze odwołanie do elementu „CUI<int>::start” w „main”
 C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CTree.tpp(197,1): message : podczas kompilowania funkcji składowej „T CTree<T>::comp(std::string)” klasy klasa szablon
           with
           [
@@ -17,21 +27,21 @@ C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4
           ]
 C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CUI.tpp(117,7): message : zobacz pierwsze odwołanie do elementu „CTree<int>::comp” w „CUI<int>::comp”
 C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CUI.tpp(22,8): message : zobacz pierwsze odwołanie do elementu „CUI<int>::comp” w „CUI<int>::start”
-C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\main.cpp(25,11): message : zobacz pierwsze odwołanie do elementu „CUI<int>::start” w „main”
-C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CTree.tpp(502,1): message : podczas kompilowania funkcji składowej „void CTree<int>::deAllocTree(void)” klasy klasa szablon
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\main.cpp(10,11): message : zobacz pierwsze odwołanie do elementu „CUI<int>::start” w „main”
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CTree.tpp(478,1): message : podczas kompilowania funkcji składowej „void CTree<int>::deAllocTree(void)” klasy klasa szablon
 C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CTree.tpp(41,13): message : zobacz pierwsze odwołanie do elementu „CTree<int>::deAllocTree” w „CTree<int>::~CTree”
-C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CUI.h(20,1): message : zobacz pierwsze odwołanie do elementu „CTree<int>::~CTree” w „CUI<int>::CUI”
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\main.cpp(8,13): message : zobacz pierwsze odwołanie do elementu „CTree<int>::~CTree” w „main”
 C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CTree.tpp(30,19): message : podczas kompilowania funkcji składowej „CTree<int>::CTree(void)” klasy klasa szablon
-C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CUI.h(20,1): message : zobacz pierwsze odwołanie do elementu „CTree<int>::CTree” w „CUI<int>::CUI”
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\main.cpp(8,13): message : zobacz pierwsze odwołanie do elementu „CTree<int>::CTree” w „main”
 C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CTree.tpp(14,42): message : zobacz odwołanie do kompilowanego tworzenia wystąpienia „CTree<int>” klasy klasa szablon
-C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CTree.tpp(273,14): warning C4244: "return": konwersja z "double" do "T", możliwa utrata danych
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CTree.tpp(288,13): warning C4244: "return": konwersja z "double" do "T", możliwa utrata danych
           with
           [
               T=int
           ]
   Trwa generowanie kodu
-  98 of 1366 functions ( 7.2%) were compiled, the rest were copied from previous compilation.
-    56 functions were new in current compilation
-    134 functions had inline decision re-evaluated but remain unchanged
+  16 of 1367 functions ( 1.2%) were compiled, the rest were copied from previous compilation.
+    2 functions were new in current compilation
+    27 functions had inline decision re-evaluated but remain unchanged
   Zakończono generowanie kodu
   Lista3.vcxproj -> C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\x64\Release\Lista4.exe

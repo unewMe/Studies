@@ -6,7 +6,7 @@
 int main()
 {
 	CTree<int> tree;
-	CUI<std::string> cui;
+	CUI<int> cui;
 	cui.start();
 	return 0;
 }

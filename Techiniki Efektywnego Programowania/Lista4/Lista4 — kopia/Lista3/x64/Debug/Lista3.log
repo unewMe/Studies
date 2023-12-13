@@ -1,0 +1,4 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: Katalog pośredni (x64\Debug\) zawiera pliki udostępnione z innego projektu (Lista3.vcxproj). Może to spowodować niepoprawne zachowanie podczas oczyszczania i ponownej kompilacji.
+  main.cpp
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\Lista3\CTree.tpp(256,4): warning C4984: „if constexpr” jest rozszerzeniem języka C++17
+  Lista3.vcxproj -> C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\x64\Debug\Lista4.exe

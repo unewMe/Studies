@@ -31,7 +31,7 @@ private:
 	int indexOfVar(const std::string& variable) const;
 	
 	T comp(CNode* current) const;
-	T compValue(std::string currentValue) const;
+	T compValue(std::string& currentValue) const;
 	T restOfComp(std::string& value, CNode* current) const;
 
 	CNode* addNextNode(std::string& expression);
