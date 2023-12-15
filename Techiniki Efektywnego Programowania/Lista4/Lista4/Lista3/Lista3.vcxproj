@@ -129,6 +129,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CNode.cpp" />
+    <ClCompile Include="stringOperators.cpp" />
     <ClInclude Include="CTree.tpp">
       <FileType>Document</FileType>
     </ClInclude>

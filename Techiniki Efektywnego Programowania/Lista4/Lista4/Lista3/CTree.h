@@ -5,7 +5,6 @@
 #include <unordered_map>
 #include <unordered_set>
 #include<regex>
-//#define CONSTVALUE "1"
 
 template<class T>
 class CTree
@@ -16,9 +15,11 @@ private:
 	std::unordered_map<std::string, T> varsValueMap;
 	std::unordered_map<std::string, int> varsCountMap;
 	std::unordered_set<std::string> unUsedElements;
+
 	static const std::unordered_map<std::string, int> funMap;
 	static const std::regex patternValue;
 	static const std::string CONSTVALUE;
+
 	bool ifTooManyElements;
 	bool ifConstUsed;
 
@@ -31,15 +32,13 @@ private:
 	int indexOfVar(const std::string& variable) const;
 	
 	T comp(CNode* current) const;
-	T compValue(std::string& currentValue) const;
+	T compValue(const std::string& currentValue) const;
 	T restOfComp(std::string& value, CNode* current) const;
 
 	CNode* addNextNode(std::string& expression);
 
 	void setElements(const CTree<T>& current);
 	void deAllocTree();
-
-	//void whichToRemove(std::string& expression, bool ifAdd);
 
 	
 public:

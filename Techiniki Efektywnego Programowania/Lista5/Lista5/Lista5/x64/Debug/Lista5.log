@@ -1,0 +1,30 @@
+﻿  main.cpp
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista5\Lista5\Lista5\CTree.tpp(323,13): warning C4244: "return": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista5\Lista5\Lista5\CTree.tpp(320,1): message : podczas kompilowania funkcji składowej „T CTree<T>::restOfComp(std::string &,CNode *) const” klasy klasa szablon
+          with
+          [
+              T=int
+          ]
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista5\Lista5\Lista5\CTree.tpp(304,4): message : zobacz pierwsze odwołanie do elementu „CTree<int>::restOfComp” w „CTree<int>::comp”
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista5\Lista5\Lista5\CTree.tpp(269,2): message : zobacz pierwsze odwołanie do elementu „CTree<int>::comp” w „CTree<int>::comp”
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista5\Lista5\Lista5\main.cpp(17,11): message : zobacz pierwsze odwołanie do elementu „CTree<int>::comp” w „main”
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista5\Lista5\Lista5\CTree.tpp(218,1): message : podczas kompilowania funkcji składowej „void CTree<int>::checkRestOfExpresion(std::string &)” klasy klasa szablon
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista5\Lista5\Lista5\CTree.tpp(164,22): message : zobacz pierwsze odwołanie do elementu „CTree<int>::checkRestOfExpresion” w „CTree<int>::enter”
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista5\Lista5\Lista5\main.cpp(11,13): message : zobacz pierwsze odwołanie do elementu „CTree<int>::enter” w „main”
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista5\Lista5\Lista5\CTree.tpp(234,1): message : podczas kompilowania funkcji składowej „T CTree<T>::comp(std::string)” klasy klasa szablon
+          with
+          [
+              T=int
+          ]
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista5\Lista5\Lista5\main.cpp(17,11): message : zobacz pierwsze odwołanie do elementu „CTree<int>::comp” w „main”
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista5\Lista5\Lista5\CTree.tpp(14,42): message : zobacz odwołanie do kompilowanego tworzenia wystąpienia „CTree<int>” klasy klasa szablon
+C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista5\Lista5\Lista5\CTree.tpp(327,13): warning C4244: "return": konwersja z "double" do "T", możliwa utrata danych
+          with
+          [
+              T=int
+          ]
+  Lista5.vcxproj -> C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista5\Lista5\x64\Debug\Lista5.exe

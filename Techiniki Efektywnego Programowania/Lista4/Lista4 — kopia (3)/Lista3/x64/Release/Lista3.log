@@ -1,0 +1,8 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: Katalog pośredni (x64\Release\) zawiera pliki udostępnione z innego projektu (Lista3.vcxproj). Może to spowodować niepoprawne zachowanie podczas oczyszczania i ponownej kompilacji.
+  main.cpp
+  Trwa generowanie kodu
+  283 of 1538 functions (18.4%) were compiled, the rest were copied from previous compilation.
+    100 functions were new in current compilation
+    131 functions had inline decision re-evaluated but remain unchanged
+  Zakończono generowanie kodu
+  Lista3.vcxproj -> C:\Users\chudz\Desktop\Studies\Techiniki Efektywnego Programowania\Lista4\Lista4\x64\Release\Lista4.exe
